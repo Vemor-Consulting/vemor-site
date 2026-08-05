@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Contact Vemor · Book a Call or Send a Message"
+  description="Talk to Gio about automating your business. Book a 20-minute call, send a message, or call Sofia, the live AI receptionist demo. English y español."
+  path="/contact"
+>
+  <section class="hero" style="min-height:0; padding-bottom:40px;">
+    <span class="hero-tagline">Contact</span>
+    <h1>Tell me what's <span class="gold">eating your time.</span></h1>
+    <p class="hero-sub">
+      Twenty minutes, no pitch deck, English o español. If automation isn't worth it
+      for your case, I'll tell you that too.
+    </p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="contact-grid">
+      <div>
+        <h2 class="title" style="font-size:1.5rem;">Three ways to reach me</h2>
+        <p class="contact-line">📅 <a href="https://Vemor.as.me/">Book a 20-minute call</a> straight onto my calendar.</p>
+        <p class="contact-line">📞 Curious about the AI receptionist? Hit the gold <strong>Talk to Sofia</strong> button in the corner. She's a live demo.</p>
+        <p class="contact-line">✉️ Email works too: <a href="mailto:gio@vemor.ai">gio@vemor.ai</a>. I answer within 24 hours.</p>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:24px;">
+          Vemor Consulting LLC · San Diego, California<br />
+          Serving the US and Mexico, in English and Spanish.
+        </p>
+      </div>
+      <div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="you@company.com" required />
+          </label>
+          <label>What can I help with?
+            <select name="topic">
+              <option value="operations">Automating my operations</option>
+              <option value="voice">AI receptionist (VemorVoice)</option>
+              <option value="question">I have a question</option>
+              <option value="other">Something else</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" placeholder="Tell me a bit about your business and what's eating your week..." rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn-primary" style="justify-content:center;">Send Message</button>
+        </form>
+        <div class="contact-success" id="contactSuccess">
+          ✅ Message sent. I'll get back to you within 24 hours. — Gio
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = e.target;
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      })
+        .then(function () {
+          form.style.display = 'none';
+          document.getElementById('contactSuccess').classList.add('visible');
+        })
+        .catch(function () {
+          var body = 'Name: ' + data.get('name') + '%0AEmail: ' + data.get('email') +
+            '%0ATopic: ' + data.get('topic') + '%0A%0A' + data.get('message');
+          window.location.href = 'mailto:gio@vemor.ai?subject=Vemor Inquiry from ' + data.get('name') + '&body=' + body;
+        });
+    });
+  </script>
+</Base>

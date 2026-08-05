@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Giovanni Vega Garcia',
+  alternateName: 'Gio',
+  jobTitle: 'Founder',
+  worksFor: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  knowsLanguage: ['en', 'es'],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of San Diego' },
+  ],
+  description: '14-year automotive operations veteran turned AI automation builder. MBA (University of San Diego), GenAI certificate (IE Business School). Founder of Vemor Consulting LLC, San Diego.',
+};
+---
+<Base
+  title="About Gio · The Operator Behind Vemor"
+  description="Giovanni Vega Garcia spent 14 years managing smog stations, writing collision estimates, and adjusting claims before founding Vemor. This is why the automation works."
+  schema={schema}
+  path="/about"
+>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">About</span>
+    <h1>Built by someone <span class="gold">who gets it.</span></h1>
+    <p class="hero-sub">
+      Vemor wasn't built by someone who read a blog post about small business.
+      It was built by someone who spent 14 years inside one.
+    </p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="story-grid">
+      <div class="prose">
+        <p>
+          I'm Giovanni. Gio. First-generation college grad, son of immigrants who built
+          their lives through work that nobody automated for them.
+        </p>
+        <p>
+          <strong>Six years managing smog station operations</strong>: three facilities, eighteen
+          employees, test-and-repair, the counter, the phones, the vendors, the payroll.
+          I know what it's like when the person answering the phone is also the person
+          running the shop.
+        </p>
+        <p>
+          <strong>Eight years as a field claims adjuster</strong> for carriers you know: GEICO,
+          Wawanesa, Farmers. Over a thousand shop visits across Southern California.
+          Every day I watched owners juggle a customer at the counter, a tech with a
+          question, and a phone ringing off the hook. I watched missed calls become
+          missed revenue, one at a time.
+        </p>
+        <p>
+          Then I taught myself to build. Python, automation, AI agents, databases,
+          hardware. Not because I wanted to become a programmer, but because I kept
+          seeing the same fixable problems and nobody was fixing them <strong>for the businesses
+          I came from</strong>. The shops. The Spanish-speaking owners big tech ignores. The
+          operators too busy working to shop for software.
+        </p>
+        <p>
+          Vemor is the company I wished existed when I was the one closing out four
+          registers at 9 PM.
+        </p>
+        <p class="gold" style="font-weight:600; font-size:1.1rem;">— Gio</p>
+      </div>
+      <div>
+        <div class="story-stats">
+          <div class="stat-card">
+            <div class="stat-value">14+</div>
+            <div class="stat-label">years in automotive operations and claims</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">1,000+</div>
+            <div class="stat-label">shop visits as a field adjuster</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">MBA</div>
+            <div class="stat-label">STEM-certified, University of San Diego</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">1st Gen</div>
+            <div class="stat-label">college graduate</div>
+          </div>
+        </div>
+        <div style="margin-top:24px;">
+          <ul class="feature-list">
+            <li><strong>Bilingual, for real.</strong>&nbsp;English and Spanish are both native modes, for me and for everything I build.</li>
+            <li><strong>Generative AI certificate,</strong>&nbsp;IE Business School: Unlocking Enterprise Value.</li>
+            <li><strong>Studying what I practice.</strong>&nbsp;Preparing doctoral research on how small businesses make technology decisions they can survive. Every Vemor engagement feeds the work.</li>
+            <li><strong>Builder.</strong>&nbsp;Self-taught, systems in production today: automation pipelines, RFID tracking, AI phone agents, legal document intelligence.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-full soft north-star">
+    <p class="north-star-text">
+      "Every credential on this page matters for one reason: <em>it makes the thing I build
+      for you more likely to work.</em> That's the only test."
+    </p>
+  </div>
+
+  <section style="text-align:center;">
+    <h2 class="title">Let's talk.</h2>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Call</a>
+      <a href="/contact" class="btn-secondary">Send a Message</a>
+    </div>
+  </section>
+</Base>

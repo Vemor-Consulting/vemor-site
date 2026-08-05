@@ -1,0 +1,138 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Managed AI operations and automation for small business',
+  provider: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  description: 'Managed AI operations for small businesses: operations audit, system architecture, custom automation builds, and ongoing managed service. An alternative to hiring a fractional CTO.',
+  areaServed: ['United States', 'Mexico'],
+};
+---
+<Base
+  title="Managed AI Operations for Small Business | Vemor"
+  description="An operator who builds, not a consultant with a deck. Operations audits, custom AI automation, and ongoing managed service for small businesses. An alternative to a fractional CTO or IT hire."
+  schema={schema}
+  path="/operations"
+>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">Managed AI Operations</span>
+    <h1>An operator who builds.<br /><span class="gold">Not a consultant with a deck.</span></h1>
+    <p class="hero-sub">
+      Most small businesses don't need a technology strategy. They need the invoice
+      chased, the books reconciled, the phones answered, and the report on the desk
+      Monday morning. That's what this service delivers: finished outcomes, run for you.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">What You're Buying</span>
+      <h2 class="title">Audit. Architect. Build. Operate. Expand.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Audit</h3>
+          <p>We sit down and map your operation: where the hours go, where the errors hide, what a fix is actually worth. You get a written plan whether or not we go further.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Architect</h3>
+          <p>The system gets designed around your existing tools: your POS, your calendar, your spreadsheets. What to build, what to buy, what to leave alone.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Build</h3>
+          <p>Custom automation, AI agents, databases, integrations, even hardware like RFID tracking. Built by me, tested on your real work before it goes live.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Operate</h3>
+          <p>I monitor it, maintain it, and send you reports that prove it's working. When something breaks at 6 AM, that's my problem, not yours.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <h3>Expand</h3>
+          <p>Every report shows what else could be automated. When you're ready, we take the next task off your plate. Never before.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT KIND OF WORK -->
+  <section>
+    <span class="label">The Kind of Work This Covers</span>
+    <h2 class="title">If it repeats, it can probably die.</h2>
+    <p class="sub">Real examples from systems Vemor has built and runs today:</p>
+    <div class="cards-3">
+      <div class="card">
+        <h3>Daily reconciliation</h3>
+        <p>Automated nightly reconciliation across a four-station operation, reading straight from the existing point-of-sale database. Payment errors and unauthorized discounts flagged same day instead of surfacing weeks later in accounting.</p>
+      </div>
+      <div class="card">
+        <h3>Physical asset tracking</h3>
+        <p>RFID tracking for rental equipment across four locations, with automatic evening alerts when a unit is missing and not on an invoice. Hardware, software, and text alerts, built as one system.</p>
+      </div>
+      <div class="card">
+        <h3>Document intelligence</h3>
+        <p>An automated research engine for a law practice that reads hundreds of legal filings, extracts and verifies the numbers with evidence for every figure, and produces a benchmark report in seconds instead of hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING + FIT -->
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="story-grid">
+        <div class="story-content">
+          <h4>What it costs</h4>
+          <p>
+            Engagements start at <strong style="color:var(--text);">$2,000/month</strong>, scoped to
+            the work. That's less than a part-time hire, and it covers architecture,
+            the build, and the ongoing operation. Not advice. Not a license fee.
+            A running system with a human accountable for it. Some businesses shop
+            for this under "fractional CTO." I don't use the title. I'm the operator
+            who builds and runs the systems a CTO would only plan.
+          </p>
+          <h4>Not sure yet?</h4>
+          <p>
+            Start with a paid operations audit. A few days inside your workflow, then a
+            written report: what to automate, what it costs, what it saves. If we go
+            forward, the audit rolls into the engagement. If not, you keep the roadmap.
+          </p>
+        </div>
+        <div class="story-content">
+          <h4>Good fit</h4>
+          <p>
+            Owner-operated businesses drowning in repeatable work: auto services, clinics,
+            legal practices, property and field services. Teams where the owner is still
+            the one doing the reconciliation at 9 PM. English or Spanish speaking, or both.
+          </p>
+          <h4>Bad fit</h4>
+          <p>
+            Anyone shopping for a magic AI button, a one-time script with no owner, or the
+            cheapest possible vendor. This is a working relationship. I take on a small
+            number of clients and stay accountable to every one of them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section style="text-align:center;">
+    <h2 class="title">Tell me what's eating your week.</h2>
+    <p class="sub" style="margin-left:auto; margin-right:auto;">
+      First call is twenty minutes and costs nothing. I'll tell you straight whether
+      automation is worth it for your case. Sometimes the honest answer is no.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Discovery Call</a>
+      <a href="/contact" class="btn-secondary">Send a Message</a>
+    </div>
+  </section>
+</Base>

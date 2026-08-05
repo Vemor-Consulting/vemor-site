@@ -1,0 +1,227 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Vemor',
+  description: 'AI automation and managed operations for small businesses. Built and run by a 14-year industry operator. Bilingual, English and Spanish.',
+  url: 'https://vemor.ai',
+  priceRange: '$$',
+  areaServed: ['San Diego', 'Southern California', 'United States', 'Mexico'],
+};
+---
+<Base
+  title="Vemor | AI Automation Built by Someone Who's Done Your Job"
+  description="AI automation and managed operations for small businesses. Phones answered, books reconciled, busywork gone. Built and run by a 14-year industry operator. English y español."
+  schema={schema}
+  path="/"
+>
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-tagline">AI Automation &amp; Managed Operations</span>
+    <h1>AI automation built by someone <span class="gold">who's done your job.</span></h1>
+    <p class="hero-sub">
+      I spent 14 years running shops, writing estimates, and adjusting claims before I ever
+      wrote a line of code. Now I build the systems that kill your busywork, and I run them
+      for you. In English y en español.
+    </p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Let's talk about what's eating your time</a>
+      <a href="/voice" class="btn-secondary">Hear the AI receptionist</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <span class="proof-value">14+</span>
+        <span class="proof-label">Years inside the industries I automate</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">1,000+</span>
+        <span class="proof-label">Shop visits as an adjuster</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">EN / ES</span>
+        <span class="proof-label">Bilingual, natively</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">24/7</span>
+        <span class="proof-label">Systems that run while you sleep</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STORY (CSC land-and-expand) -->
+  <div class="section-full soft" id="results">
+    <div class="inner">
+      <span class="label">Real Work, Real Client</span>
+      <h2 class="title">It started with one report. It became four systems.</h2>
+      <p class="sub">
+        A four-location smog inspection operation in San Diego's South Bay. This is how
+        Vemor engagements actually go: one problem solved, then the next one.
+      </p>
+      <div class="story-grid">
+        <div>
+          <div class="story-stats">
+            <div class="stat-card">
+              <div class="stat-value">2+ hrs/day</div>
+              <div class="stat-label">of manual reconciliation, eliminated</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Same day</div>
+              <div class="stat-label">payment errors caught, not weeks later</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">4 systems</div>
+              <div class="stat-label">live: reporting, RFID tracking, AI phones, security</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Month 1</div>
+              <div class="stat-label">"The system paid for itself"</div>
+            </div>
+          </div>
+        </div>
+        <div class="story-content">
+          <h4>Where it started</h4>
+          <p>
+            Every night, someone had to manually reconcile sales across four stations.
+            Compare printouts, hunt for voided invoices, check discounts, find payment
+            errors. Two-plus hours a day, and mistakes still slipped through for weeks.
+          </p>
+          <h4>What we built</h4>
+          <p>
+            An automated pipeline that reads their existing point-of-sale database every
+            night, reconciles everything, flags exceptions, and emails a clean report
+            before opening. No new software to learn. No data migration. It sits on top
+            of what they already had.
+          </p>
+          <h4>What happened next</h4>
+          <p>
+            Trust earned, the next problem came up: rental equipment going missing.
+            We built RFID tracking across all four locations. Then a bilingual AI agent
+            for the phones. Then security management. One relationship, four systems,
+            all running today as a managed service.
+          </p>
+          <div class="pull-quote">"The system paid for itself in the first month."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section id="services">
+    <span class="label">What We Do</span>
+    <h2 class="title">Two ways to work with Vemor.</h2>
+    <p class="sub">Start small with your phones, or hand off your operations. Every client is different, so every build is different. What's the same: you get the finished result, not a tool you have to figure out.</p>
+    <div class="cards-2">
+      <div class="card featured">
+        <span class="card-badge">The Core Service</span>
+        <h3>Managed AI Operations</h3>
+        <p class="tagline">Your operations, handled end to end.</p>
+        <p>
+          I find the busywork eating your week, build the automation that kills it, and
+          then I run it. Reconciliation, reporting, outreach, databases, custom tools.
+          You get a builder and an operator, not a consultant with a slide deck.
+        </p>
+        <ul class="feature-list">
+          <li>Audit, architect, build, operate, expand</li>
+          <li>Built on top of the tools you already use</li>
+          <li>Ongoing monitoring and weekly reporting</li>
+          <li>Nothing locks you in. Ever.</li>
+        </ul>
+        <a href="/operations" class="card-cta">How it works →</a>
+      </div>
+      <div class="card">
+        <span class="card-badge">Start Here</span>
+        <h3>VemorVoice</h3>
+        <p class="tagline">Your phones answered. 24/7. Both languages.</p>
+        <p>
+          A bilingual AI receptionist that answers every call, books appointments,
+          handles FAQs, and hands off to you when it matters. Set up in days.
+          Cancel by unforwarding your number.
+        </p>
+        <ul class="feature-list">
+          <li>English and Spanish, mid-call, natively</li>
+          <li>Books straight into your calendar</li>
+          <li>Weekly report of every call and booking</li>
+          <li>Flat monthly rate, no per-minute games</li>
+        </ul>
+        <a href="/voice" class="card-cta">Hear it live →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">The Process</span>
+      <h2 class="title">Five steps. No mystery.</h2>
+      <p class="sub">This is the same process behind every system Vemor runs today.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Audit</h3>
+          <p>We map where your time actually goes and find the automation worth doing first.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Architect</h3>
+          <p>Design the system around your existing tools. Build what's needed, buy what's smarter, skip the rest.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Build</h3>
+          <p>I build it myself. Automations, AI agents, databases, integrations, hardware if the job calls for it.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Operate</h3>
+          <p>I run it. Monitoring, maintenance, reports. You don't need an IT department.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <h3>Expand</h3>
+          <p>When the next thing hurts, we automate that too. Trust first, always.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY TRUST -->
+  <section>
+    <span class="label">Why Owners Trust This</span>
+    <h2 class="title">If I disappeared tomorrow, your business wouldn't notice.</h2>
+    <div class="prose">
+      <p>
+        That's not modesty, that's the design. Everything Vemor builds sits <strong>on top of
+        what you already have</strong>. Your point-of-sale stays your point-of-sale. Your data stays
+        yours. Forward your phone line to the AI agent; unforward it and you're back where
+        you started. No platform migrations, no contracts that trap you, no system only I
+        can operate.
+      </p>
+      <p>
+        Most AI agencies learned your industry from a sales call. I managed smog stations
+        for six years, wrote collision estimates, and spent eight years walking into shops
+        as a field adjuster. When I automate a workflow, it's because <strong>I've personally done
+        that workflow</strong> and I know exactly which parts deserve to die.
+      </p>
+    </div>
+  </section>
+
+  <!-- NORTH STAR -->
+  <div class="section-full soft north-star">
+    <p class="north-star-text">"Vemor exists because <em>life's too short</em> to spend it on busywork."</p>
+  </div>
+
+  <!-- FINAL CTA -->
+  <section style="text-align:center;">
+    <h2 class="title">Ready to get your time back?</h2>
+    <p class="sub" style="margin-left:auto; margin-right:auto;">
+      Twenty minutes, no pitch deck. Tell me what's eating your week and I'll tell you
+      honestly whether it's worth automating.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Call</a>
+      <a href="/contact" class="btn-secondary">Send a Message</a>
+    </div>
+  </section>
+</Base>

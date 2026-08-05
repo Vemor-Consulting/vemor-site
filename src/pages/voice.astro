@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'AI phone agent / bilingual AI receptionist for small business',
+  provider: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  description: 'VemorVoice: a managed bilingual (English/Spanish) AI phone agent that answers every call 24/7, books appointments, and recovers missed calls. Flat monthly rate.',
+  areaServed: ['United States', 'Mexico'],
+};
+---
+<Base
+  title="VemorVoice · Bilingual AI Receptionist That Answers Every Call | Vemor"
+  description="A bilingual AI phone agent for small business. Answers 24/7 in English and Spanish, books appointments, recovers missed calls. Managed for you at a flat monthly rate. Try the live demo."
+  schema={schema}
+  path="/voice"
+>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">VemorVoice</span>
+    <h1>Every call answered.<br /><span class="gold">Both languages. All hours.</span></h1>
+    <p class="hero-sub">
+      A missed call is a customer calling your competitor. VemorVoice is an AI
+      receptionist that picks up in under a second, speaks English and Spanish in the
+      same call, books appointments into your calendar, and texts you when it matters.
+    </p>
+    <div class="hero-ctas">
+      <a href="#demo" class="btn-primary">Talk to Sofia right now</a>
+      <a href="https://Vemor.as.me/" class="btn-secondary">Book a Demo Call</a>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <div class="section-full soft" id="demo">
+    <div class="inner" style="text-align:center;">
+      <span class="label">Don't Take My Word For It</span>
+      <h2 class="title">Call her. Right now.</h2>
+      <p class="sub" style="margin-left:auto; margin-right:auto;">
+        Sofia is a live VemorVoice agent. Hit the gold button in the corner of this page
+        and have a conversation. Ask her something in Spanish halfway through. That
+        30-second call will tell you more than anything I could write here.
+      </p>
+      <p style="color:var(--text-muted); font-size:0.9rem;">
+        Want a demo, but built for your business? Book a call and you'll have one within days.
+      </p>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section>
+    <span class="label">What It Does</span>
+    <h2 class="title">A receptionist that never sleeps, never sighs, never quits.</h2>
+    <div class="cards-3">
+      <div class="card">
+        <h3>Answers everything</h3>
+        <ul class="feature-list">
+          <li>Picks up in under one second, 24/7</li>
+          <li>English and Spanish mid-call, no menus. Need another language? Agents have already been built in Italian; most major languages are available.</li>
+          <li>Trained on your services, prices, and hours</li>
+          <li>Handles the questions you answer 30 times a day</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Books and recovers</h3>
+        <ul class="feature-list">
+          <li>Books appointments straight into your calendar</li>
+          <li>Calls back missed callers before they call the competition</li>
+          <li>Captures name, number, and reason, every time</li>
+          <li>Transfers to you when a call needs the owner</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Reports and improves</h3>
+        <ul class="feature-list">
+          <li>Weekly report: every call, booking, and question</li>
+          <li>You see what customers actually ask for</li>
+          <li>Managed by Vemor, tuned as your business changes</li>
+          <li>Flat monthly rate, no per-minute surprises</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW SWITCHING WORKS -->
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">The Easiest Tech Decision You'll Make</span>
+      <h2 class="title">Forward your number. That's the whole migration.</h2>
+      <div class="story-grid">
+        <div class="story-content">
+          <h4>Getting started</h4>
+          <p>
+            We spend an hour learning your business: services, prices, policies, the
+            questions your phone rings with. I build and test your agent on real
+            scenarios. When you're happy with it, you forward your line. Live in days,
+            not months.
+          </p>
+        </div>
+        <div class="story-content">
+          <h4>Changing your mind</h4>
+          <p>
+            Unforward your number and everything is back exactly how it was. No
+            equipment, no software installed, no data held hostage, no long contract.
+            I keep clients by being useful, not by locking the door.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING SIGNAL -->
+  <section>
+    <div class="story-grid">
+      <div>
+        <span class="label">What It Costs</span>
+        <h2 class="title">Priced against a missed call, not against software.</h2>
+        <p class="sub" style="margin-bottom:0;">
+          VemorVoice runs at a flat monthly rate from <strong style="color:var(--text);">$500/month</strong>,
+          everything included: the agent, the number, the bookings, the weekly report,
+          and me managing it. One recovered job a week typically covers it. A part-time
+          receptionist costs four to six times more and goes home at 5.
+        </p>
+      </div>
+      <div class="story-stats">
+        <div class="stat-card">
+          <div class="stat-value">&lt; 1 sec</div>
+          <div class="stat-label">time to answer, every call</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">EN / ES</div>
+          <div class="stat-label">same call, no language menus</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">Days</div>
+          <div class="stat-label">from first call to live</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">$0</div>
+          <div class="stat-label">hardware, setup disruption, exit cost</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align:center; padding-top:0;">
+    <h2 class="title">Stop losing the calls you never hear.</h2>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Demo</a>
+      <a href="/contact" class="btn-secondary">Ask a Question</a>
+    </div>
+  </section>
+</Base>
