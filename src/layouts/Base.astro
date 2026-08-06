@@ -59,7 +59,14 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
 
   <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
 
-  <!-- TODO(gio): paste GA4 tag here once the property is created (see BUILD_PLAN.md, Phase 1 checklist) -->
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLW54LGKWN"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JLW54LGKWN');
+  </script>
 </head>
 <body>
   <nav>
