@@ -17,6 +17,11 @@
 
 html { scroll-behavior: smooth; }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
@@ -423,6 +428,7 @@ footer {
   .story-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .hero-proof { gap: 28px; }
   footer { flex-direction: column; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; row-gap: 12px; }
 }
 
 @media (max-width: 600px) {
