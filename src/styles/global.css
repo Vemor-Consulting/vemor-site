@@ -258,6 +258,7 @@ section { padding: 96px 48px; max-width: 1150px; margin: 0 auto; }
 
 /* ===== PROCESS STEPS ===== */
 .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.steps.steps-4 { grid-template-columns: repeat(4, 1fr); }
 .step {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -395,7 +396,8 @@ footer {
 .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 960px) {
+/* Nav collapses earlier than the page layout: 7 items need the room. */
+@media (max-width: 1080px) {
   nav { padding: 12px 22px; }
   .nav-links {
     display: none;
@@ -410,12 +412,14 @@ footer {
   }
   .nav-links.open { display: flex; box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
   .nav-toggle { display: block; }
+}
 
+@media (max-width: 960px) {
   .hero { padding: 130px 24px 70px; min-height: 0; }
   section { padding: 72px 24px; }
   .section-full { padding: 72px 24px; }
 
-  .cards-2, .cards-3, .steps { grid-template-columns: 1fr; }
+  .cards-2, .cards-3, .steps, .steps.steps-4 { grid-template-columns: 1fr; }
   .story-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .hero-proof { gap: 28px; }
   footer { flex-direction: column; text-align: center; }

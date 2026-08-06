@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Custom automation builds for small business',
+  provider: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  description: 'Fixed-scope custom automation for small businesses: one workflow, built on your existing tools, quoted before the build starts. Reconciliation, databases, document pipelines, outreach automation.',
+  areaServed: ['United States', 'Mexico'],
+};
+---
+<Base
+  title="Custom Automation Builds for Small Business | Vemor"
+  description="One workflow, fixed scope, clear price. Vemor builds custom automation on the tools you already use: reconciliation, databases, document pipelines, outreach. Keep it, or have Vemor run it."
+  schema={schema}
+  path="/builds"
+>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">Custom Builds</span>
+    <h1>One problem.<br /><span class="gold">Solved for good.</span></h1>
+    <p class="hero-sub">
+      Not every business needs a full operations partner on day one. Sometimes one
+      task is eating your week, and it just needs to die. A custom build is a single
+      system with a fixed scope and a clear price, built on the tools you already use.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">What a Build Looks Like</span>
+      <h2 class="title">Real systems, running today.</h2>
+      <div class="cards-3">
+        <div class="card">
+          <h3>A reconciliation engine</h3>
+          <p>Reads the client's existing point-of-sale database every night, reconciles sales across four locations, flags payment errors and unauthorized discounts, and emails a finished report before opening. What used to be a full-time job is now an hour of review.</p>
+        </div>
+        <div class="card">
+          <h3>A document pipeline</h3>
+          <p>Reads hundreds of legal filings for a law practice, extracts the numbers with evidence behind every figure, validates them with hard arithmetic rules, and produces a benchmark report in seconds. Work that used to take hours per case.</p>
+        </div>
+        <div class="card">
+          <h3>An asset tracker</h3>
+          <p>RFID tracking for rental equipment across four physical locations. Readers at each site, cloud sync, cross-checking against invoices, and a text alert at closing when a unit is missing. Hardware and software, delivered as one working system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <span class="label">How It Works</span>
+    <h2 class="title">Scope first. Price before build. No surprises.</h2>
+    <div class="steps steps-4">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Audit</h3>
+        <p>A paid operations audit: a few days inside your workflow, then a written plan of what to automate, what it costs, and what it saves. The plan is yours either way.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Fixed quote</h3>
+        <p>You get the scope and the price before anything gets built. If we missed the estimate, that's Vemor's problem, not yours.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Build &amp; prove</h3>
+        <p>Built on your existing tools and tested against your real work, not demo data. It ships when it survives your actual Tuesday.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Your choice</h3>
+        <p>Take the keys: documentation included, the system is yours. Or have Vemor run it as a managed service and never think about it again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIT -->
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="story-grid">
+        <div class="story-content">
+          <h4>Good fit for a build</h4>
+          <p>
+            You know exactly what hurts: the nightly close-out, the quote follow-ups,
+            the spreadsheet nobody trusts, the report that takes all Friday. One
+            defined problem, one defined win. Many clients start here and grow into
+            <a href="/operations" style="color:var(--gold);">Managed AI Operations</a>
+            once the first system proves itself.
+          </p>
+        </div>
+        <div class="story-content">
+          <h4>The same promise applies</h4>
+          <p>
+            Every build sits on top of what you already have. Your data stays yours,
+            the documentation comes with it, and nothing requires Vemor to stay
+            useful. We earn the next project by delivering this one.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section style="text-align:center;">
+    <h2 class="title">Got a task that needs to die?</h2>
+    <p class="sub" style="margin-left:auto; margin-right:auto;">
+      Tell us what it is. Twenty minutes, and you'll get a straight answer on whether
+      a build is worth it. Sometimes the honest answer is a spreadsheet fix and a
+      handshake.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">Book a Discovery Call</a>
+      <a href="/contact" class="btn-secondary">Send a Message</a>
+    </div>
+  </section>
+</Base>
