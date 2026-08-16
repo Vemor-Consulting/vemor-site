@@ -1,0 +1,244 @@
+---
+import Base from '../layouts/Base.astro';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Vemor Comps',
+  serviceType: 'PAGA settlement comparables and settlement data reports',
+  provider: { '@type': 'Organization', name: 'Vemor Consulting LLC', url: 'https://vemor.ai/' },
+  areaServed: { '@type': 'State', name: 'California' },
+  audience: { '@type': 'Audience', audienceType: 'Attorneys and legal professionals' },
+  description: 'Verified PAGA settlement comparables built from California DIR public records — firm profile reports, working Excel, and source documents, updated daily.',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a PAGA settlement comparable?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A data point from a publicly filed PAGA settlement — gross amount, exposure denominator, fees, structure — used to benchmark the value of a similar claim in negotiation or mediation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where does the data come from?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Public records on the California Department of Industrial Relations PAGA Case Search portal. Every figure is verified against the filed document it appears in, and the documents are delivered with the report.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is this different from a verdict database?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you cover class action settlements?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate — they resolve different claims and are never mixed in the same statistic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this legal advice?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Vemor Consulting LLC is not a law firm. Reports are an informational reference for licensed attorneys\' independent judgment.',
+      },
+    },
+  ],
+};
+---
+<Base
+  title="Vemor Comps | PAGA Settlement Data & Comparables for California Attorneys"
+  description="Vemor Comps turns California's public PAGA filings into verified settlement comparables — every figure matched verbatim to the filed document. Reports, working Excel, and source documents for mediation prep. Updated daily."
+  schema={[serviceSchema, faqSchema]}
+  path="/comps"
+  hideWidget={true}
+>
+  <!-- HERO -->
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">For California Employment Attorneys</span>
+    <h1>Settlement data you can verify.<br /><span class="gold">Down to the filing.</span></h1>
+    <p class="hero-sub">
+      Vemor Comps turns California's public PAGA settlement filings into comparables
+      attorneys actually cite: every figure machine-extracted, verified verbatim against
+      the source document, and delivered with the filings attached.
+    </p>
+    <div class="hero-ctas">
+      <a href="mailto:comps@vemor.ai" class="btn-primary">Request a Firm Report</a>
+      <a href="#how-it-works" class="btn-secondary">How it works &darr;</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <span class="proof-value">20,000+</span>
+        <span class="proof-label">PAGA matters tracked</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">Daily</span>
+        <span class="proof-label">New-filing monitoring</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">100%</span>
+        <span class="proof-label">of figures verified against source text</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <div class="section-full soft" id="how-it-works">
+    <div class="inner">
+      <span class="label">What You Receive</span>
+      <h2 class="title">Three deliverables. One standard: checkable.</h2>
+      <div class="cards-3">
+        <div class="card">
+          <h3>Firm Profile Report (PDF)</h3>
+          <p>
+            Every settlement on record for the plaintiff firm you name: gross, PAGA
+            allocation, fees, stated exposure denominators (pay periods, workweeks,
+            workdays), dollar-per-unit rates, PAGA-only vs. Class + PAGA classification,
+            filing and LWDA notice dates with pre-/post-reform labeling, and benchmark
+            statistics where the data supports them.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Working Excel</h3>
+          <p>
+            The same data as a live spreadsheet, formulas intact, sortable and auditable.
+            Filter by date range, settlement structure, or cohort classification. Built
+            for your own analysis, not just reading.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Source Documents</h3>
+          <p>
+            The filed settlement documents themselves, matched line-for-line to the
+            report's source appendix, so anyone on your team can independently verify
+            any figure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY THE NUMBERS HOLD UP -->
+  <section>
+    <span class="label">The Differentiator</span>
+    <h2 class="title">Why the numbers hold up.</h2>
+    <div class="prose" style="max-width:800px;">
+      <p>
+        Every extracted figure must match the exact text of the filed document it came
+        from. A number that can't be verified verbatim is withheld, not guessed.
+      </p>
+      <p>
+        Records that fail internal consistency checks are visibly flagged, shown with the
+        reason, and excluded from benchmark statistics. Pay periods, workweeks, and
+        workdays are reported exactly as each filing states them and never converted
+        between units. PAGA-only settlements are never blended with class hybrids in the
+        same statistic.
+      </p>
+      <p>
+        Exceptions are human-reviewed. The report cites its own evidence and ships with it.
+      </p>
+    </div>
+  </section>
+
+  <!-- COVERAGE -->
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="story-grid">
+        <div class="story-content">
+          <h4>Coverage, honestly stated</h4>
+          <p>
+            The corpus tracks 20,000+ PAGA matters from the California DIR's public PAGA
+            Case Search records and grows every morning. Every report states plainly how
+            many of a firm's matters have documents on file. You always know exactly what
+            the data does and does not cover.
+          </p>
+          <p style="margin-top:16px;">
+            Firms already in the corpus: 24 to 48 hour turnaround. New firms: 3 to 5
+            business days while we retrieve their filing history.
+          </p>
+        </div>
+        <div class="story-content">
+          <h4>Who it's for</h4>
+          <ul class="feature-list">
+            <li>Employment defense counsel preparing for mediation</li>
+            <li>Plaintiff-side counsel valuing claims</li>
+            <li>Mediators grounding a number</li>
+            <li>In-house teams benchmarking exposure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO ORDER -->
+  <section style="text-align:center;">
+    <span class="label">How to Order</span>
+    <h2 class="title">Email the plaintiff firm name. Get the report.</h2>
+    <p class="sub" style="margin-left:auto; margin-right:auto;">
+      Send the plaintiff firm name(s) to <a href="mailto:comps@vemor.ai" style="color:var(--gold); font-weight:600;">comps@vemor.ai</a>.
+      We confirm coverage and turnaround the same business day. Practice-group
+      subscriptions with unlimited reports, standing refreshes, and new-filing alerts
+      are available.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="mailto:comps@vemor.ai" class="btn-primary">Request a Firm Report</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">Frequently Asked Questions</span>
+      <h2 class="title">Common questions about Vemor Comps.</h2>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <p class="faq-q">What is a PAGA settlement comparable?</p>
+          <p class="faq-a">A data point from a publicly filed PAGA settlement: gross amount, exposure denominator, fees, structure. Used to benchmark the value of a similar claim in negotiation or mediation.</p>
+        </li>
+        <li class="faq-item">
+          <p class="faq-q">Where does the data come from?</p>
+          <p class="faq-a">Public records on the California Department of Industrial Relations PAGA Case Search portal. Every figure is verified against the filed document it appears in, and the documents are delivered with the report.</p>
+        </li>
+        <li class="faq-item">
+          <p class="faq-q">How is this different from a verdict database?</p>
+          <p class="faq-a">Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.</p>
+        </li>
+        <li class="faq-item">
+          <p class="faq-q">Do you cover class action settlements?</p>
+          <p class="faq-a">PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate. They resolve different claims and are never mixed in the same statistic.</p>
+        </li>
+        <li class="faq-item">
+          <p class="faq-q">Is this legal advice?</p>
+          <p class="faq-a">No. Vemor Consulting LLC is not a law firm. Reports are an informational reference for licensed attorneys' independent judgment.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <section style="padding-top:48px; padding-bottom:48px;">
+    <p class="disclaimer">
+      Reports are provided for informational purposes only as a reference tool to assist
+      in the evaluation of PAGA settlement values. They do not constitute legal advice or
+      a prediction of outcome in any matter. All data is drawn from publicly filed
+      documents on the California Department of Industrial Relations PAGA Case Search
+      portal and is subject to the accuracy and completeness of those filings. Vemor
+      Consulting LLC is not a law firm and does not provide legal services. No
+      attorney-client relationship is created by the preparation, distribution, or use of
+      these reports.
+    </p>
+  </section>
+</Base>

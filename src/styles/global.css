@@ -400,6 +400,24 @@ footer {
 .footer-links a:hover { color: var(--text); }
 .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
 
+/* ===== FAQ ===== */
+.faq-list { list-style: none; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+.faq-item:first-child { padding-top: 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.faq-a { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* ===== DISCLAIMER ===== */
+.disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* ===== RESPONSIVE ===== */
 /* Nav collapses earlier than the page layout: 7 items need the room. */
 @media (max-width: 1080px) {
