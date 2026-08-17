@@ -67,7 +67,7 @@ const faqSchema = {
   hideWidget={true}
 >
   <!-- HERO -->
-  <section class="hero" style="min-height:0; padding-bottom:60px;">
+  <section class="hero" style="min-height:0; padding-bottom:40px;">
     <span class="hero-tagline">For California Employment Attorneys</span>
     <h1>Settlement data you can verify.<br /><span class="gold">Down to the filing.</span></h1>
     <p class="hero-sub">
@@ -75,9 +75,12 @@ const faqSchema = {
       attorneys actually cite: every figure machine-extracted, verified verbatim against
       the source document, and delivered with the filings attached.
     </p>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:32px;">
+      In production use at a national employment defense practice.
+    </p>
     <div class="hero-ctas">
-      <a href="mailto:comps@vemor.ai" class="btn-primary">Request a Firm Report</a>
-      <a href="#how-it-works" class="btn-secondary">How it works &darr;</a>
+      <a href="#comps-form" class="btn-primary">Request a Firm Report</a>
+      <a href="#sample" class="btn-secondary">See a sample report</a>
     </div>
     <div class="hero-proof">
       <div class="proof-item">
@@ -95,37 +98,84 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- WHAT YOU RECEIVE -->
+  <!-- PAIN MATH BAND -->
+  <div class="comps-contrast-band">
+    <div class="comps-contrast-inner">
+      <div class="comps-contrast-col">
+        <span class="comps-contrast-label">The old way</span>
+        <p>Hours of associate time per firm, per case. Pulling filings, keying numbers, hoping nothing was misread.</p>
+      </div>
+      <div class="comps-contrast-divider"></div>
+      <div class="comps-contrast-col">
+        <span class="comps-contrast-label" style="color:var(--gold);">The Vemor way</span>
+        <p>Send a firm name. Get the report, the working Excel, and the filings themselves, with every figure verified against its source document.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORT MOCK + DELIVERABLES -->
   <div class="section-full soft" id="how-it-works">
     <div class="inner">
       <span class="label">What You Receive</span>
       <h2 class="title">Three deliverables. One standard: checkable.</h2>
-      <div class="cards-3">
-        <div class="card">
-          <h3>Firm Profile Report (PDF)</h3>
-          <p>
-            Every settlement on record for the plaintiff firm you name: gross, PAGA
-            allocation, fees, stated exposure denominators (pay periods, workweeks,
-            workdays), dollar-per-unit rates, PAGA-only vs. Class + PAGA classification,
-            filing and LWDA notice dates with pre-/post-reform labeling, and benchmark
-            statistics where the data supports them.
-          </p>
+      <div class="story-grid" style="gap:40px;">
+        <div>
+          <div class="cards-3" style="grid-template-columns:1fr;">
+            <div class="card">
+              <h3>Firm Profile Report (PDF)</h3>
+              <p>
+                Every settlement on record for the plaintiff firm you name: gross, PAGA
+                allocation, fees, stated exposure denominators (pay periods, workweeks,
+                workdays), dollar-per-unit rates, PAGA-only vs. Class + PAGA classification,
+                filing and LWDA notice dates with pre-/post-reform labeling, and benchmark
+                statistics where the data supports them.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Working Excel</h3>
+              <p>
+                The same data as a live spreadsheet, formulas intact, sortable and auditable.
+                Filter by date range, settlement structure, or cohort classification. Built
+                for your own analysis, not just reading.
+              </p>
+            </div>
+            <div class="card">
+              <h3>The Source Documents</h3>
+              <p>
+                The filed settlement documents themselves, matched line-for-line to the
+                report's source appendix, so anyone on your team can independently verify
+                any figure.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Working Excel</h3>
-          <p>
-            The same data as a live spreadsheet, formulas intact, sortable and auditable.
-            Filter by date range, settlement structure, or cohort classification. Built
-            for your own analysis, not just reading.
-          </p>
-        </div>
-        <div class="card">
-          <h3>The Source Documents</h3>
-          <p>
-            The filed settlement documents themselves, matched line-for-line to the
-            report's source appendix, so anyone on your team can independently verify
-            any figure.
-          </p>
+        <!-- REPORT MOCK VISUAL -->
+        <div class="report-mock">
+          <div class="report-mock-header">
+            <span class="report-mock-logo">Vemor Comps</span>
+            <span class="report-mock-subtitle">Firm Settlement Profile</span>
+          </div>
+          <table class="report-mock-table">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Gross</th>
+                <th>Pay Periods</th>
+                <th>$/PP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Case A v. Employer A</td><td>$450,000</td><td>7,022</td><td>$64.08</td></tr>
+              <tr><td>Case B v. Employer B</td><td>$1,200,000</td><td>18,340</td><td>$65.43</td></tr>
+              <tr><td>Case C v. Employer C</td><td>$275,000</td><td>3,891</td><td>$70.68</td></tr>
+              <tr><td>Case D v. Employer D</td><td>$825,000</td><td>12,105</td><td>$68.15</td></tr>
+              <tr class="report-mock-flagged"><td>Case E v. Employer E</td><td>$190,000</td><td>N/A</td><td>N/A</td></tr>
+            </tbody>
+          </table>
+          <div class="report-mock-footer">
+            <span class="report-mock-flag">&#9888; Case E: exposure denominator not stated in filing. Excluded from benchmarks.</span>
+            <span class="report-mock-note">Source: CA DIR PAGA Case Search &middot; Illustrative data only</span>
+          </div>
         </div>
       </div>
     </div>
@@ -150,6 +200,10 @@ const faqSchema = {
       <p>
         Exceptions are human-reviewed. The report cites its own evidence and ships with it.
       </p>
+      <p>
+        <strong style="color:var(--text);">Fast comps you can't trust are worthless the first time a number gets
+        challenged. Verification is what makes the speed usable.</strong>
+      </p>
     </div>
   </section>
 
@@ -169,6 +223,10 @@ const faqSchema = {
             Firms already in the corpus: 24 to 48 hour turnaround. New firms: 3 to 5
             business days while we retrieve their filing history.
           </p>
+          <p style="margin-top:16px; font-style:italic; color:var(--text-muted);">
+            PAGA is where we started. The verification engine behind Vemor Comps extends
+            to any settlement corpus. New datasets are added as they clear the same standard.
+          </p>
         </div>
         <div class="story-content">
           <h4>Who it's for</h4>
@@ -183,50 +241,128 @@ const faqSchema = {
     </div>
   </div>
 
-  <!-- HOW TO ORDER -->
-  <section style="text-align:center;">
-    <span class="label">How to Order</span>
-    <h2 class="title">Email the plaintiff firm name. Get the report.</h2>
+  <!-- SAMPLE REPORT -->
+  <section id="sample" style="text-align:center;">
+    <span class="label">See It First</span>
+    <h2 class="title">Request a sample report.</h2>
     <p class="sub" style="margin-left:auto; margin-right:auto;">
-      Send the plaintiff firm name(s) to <a href="mailto:comps@vemor.ai" style="color:var(--gold); font-weight:600;">comps@vemor.ai</a>.
-      We confirm coverage and turnaround the same business day. Practice-group
-      subscriptions with unlimited reports, standing refreshes, and new-filing alerts
-      are available.
+      See what a Vemor Comps firm profile looks like before you order. Enter your work
+      email below and we'll send you a sanitized sample.
     </p>
-    <div class="hero-ctas" style="justify-content:center;">
-      <a href="mailto:comps@vemor.ai" class="btn-primary">Request a Firm Report</a>
+    <div style="max-width:480px; margin:0 auto;">
+      <form class="contact-form" name="comps-sample" method="POST" data-netlify="true" id="sampleForm">
+        <input type="hidden" name="form-name" value="comps-sample" />
+        <input type="hidden" name="request-type" value="Sample report" />
+        <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <label>Your name
+          <input type="text" name="name" placeholder="Full name" required />
+        </label>
+        <label>Work email
+          <input type="email" name="email" placeholder="you@firm.com" required />
+        </label>
+        <label>Law firm / organization
+          <input type="text" name="firm" placeholder="Your firm or organization" required />
+        </label>
+        <button type="submit" class="btn-primary" style="justify-content:center; width:100%;">Request the Sample</button>
+      </form>
+      <div class="contact-success" id="sampleSuccess">
+        Got it. Check your inbox for the sample report.
+      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <div class="section-full soft">
+  <!-- ORDER FORM -->
+  <div class="section-full soft" id="comps-form">
     <div class="inner">
-      <span class="label">Frequently Asked Questions</span>
-      <h2 class="title">Common questions about Vemor Comps.</h2>
-      <ul class="faq-list">
-        <li class="faq-item">
-          <p class="faq-q">What is a PAGA settlement comparable?</p>
-          <p class="faq-a">A data point from a publicly filed PAGA settlement: gross amount, exposure denominator, fees, structure. Used to benchmark the value of a similar claim in negotiation or mediation.</p>
-        </li>
-        <li class="faq-item">
-          <p class="faq-q">Where does the data come from?</p>
-          <p class="faq-a">Public records on the California Department of Industrial Relations PAGA Case Search portal. Every figure is verified against the filed document it appears in, and the documents are delivered with the report.</p>
-        </li>
-        <li class="faq-item">
-          <p class="faq-q">How is this different from a verdict database?</p>
-          <p class="faq-a">Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.</p>
-        </li>
-        <li class="faq-item">
-          <p class="faq-q">Do you cover class action settlements?</p>
-          <p class="faq-a">PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate. They resolve different claims and are never mixed in the same statistic.</p>
-        </li>
-        <li class="faq-item">
-          <p class="faq-q">Is this legal advice?</p>
-          <p class="faq-a">No. Vemor Consulting LLC is not a law firm. Reports are an informational reference for licensed attorneys' independent judgment.</p>
-        </li>
-      </ul>
+      <span class="label">How to Order</span>
+      <h2 class="title">Request a report or start a subscription.</h2>
+      <div class="story-grid" style="gap:40px;">
+        <div>
+          <div class="story-content">
+            <h4>Firm subscription</h4>
+            <p>
+              How most firms run Vemor Comps: unlimited firm reports, standing refreshes on
+              the firms you track, and new-filing alerts, for your practice group, billed
+              monthly.
+            </p>
+          </div>
+          <div class="story-content" style="margin-top:24px;">
+            <h4>Single firm report</h4>
+            <p>
+              Need one report? Submit below. We confirm coverage and turnaround the same
+              business day.
+            </p>
+          </div>
+        </div>
+        <div>
+          <form class="contact-form" name="comps-request" method="POST" data-netlify="true" id="compsForm">
+            <input type="hidden" name="form-name" value="comps-request" />
+            <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <label>Plaintiff firm name(s) <span style="color:var(--text-muted); font-weight:400;">(required)</span>
+              <textarea name="firms" placeholder="One firm name per line" rows="3" required></textarea>
+            </label>
+            <label>Date range or specific matters <span style="color:var(--text-muted); font-weight:400;">(optional)</span>
+              <input type="text" name="date-range" placeholder="e.g. 2022-present, or specific case names" />
+            </label>
+            <label>Your name
+              <input type="text" name="name" placeholder="Full name" required />
+            </label>
+            <label>Work email
+              <input type="email" name="email" placeholder="you@firm.com" required />
+            </label>
+            <label>Law firm / organization
+              <input type="text" name="firm-org" placeholder="Your firm or organization" required />
+            </label>
+            <fieldset style="border:none; padding:0; display:flex; gap:20px;">
+              <label style="flex-direction:row; gap:8px; align-items:center; cursor:pointer;">
+                <input type="radio" name="request-type" value="Single report" checked style="width:auto; padding:0;" />
+                Single report
+              </label>
+              <label style="flex-direction:row; gap:8px; align-items:center; cursor:pointer;">
+                <input type="radio" name="request-type" value="Subscription inquiry" style="width:auto; padding:0;" />
+                Subscription inquiry
+              </label>
+            </fieldset>
+            <button type="submit" class="btn-primary" style="justify-content:center; width:100%;">Request Coverage Check</button>
+          </form>
+          <div class="contact-success" id="compsSuccess">
+            Got it. You'll hear back the same business day with coverage and turnaround.
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-top:12px; text-align:center;">
+            Prefer email? <a href="mailto:comps@vemor.ai" style="color:var(--gold);" id="compsMailto">comps@vemor.ai</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- FAQ ACCORDIONS -->
+  <section>
+    <span class="label">Frequently Asked Questions</span>
+    <h2 class="title">Common questions about Vemor Comps.</h2>
+    <div style="max-width:800px;">
+      <details class="faq-accordion">
+        <summary class="faq-q">What is a PAGA settlement comparable?</summary>
+        <p class="faq-a">A data point from a publicly filed PAGA settlement: gross amount, exposure denominator, fees, structure. Used to benchmark the value of a similar claim in negotiation or mediation.</p>
+      </details>
+      <details class="faq-accordion">
+        <summary class="faq-q">Where does the data come from?</summary>
+        <p class="faq-a">Public records on the California Department of Industrial Relations PAGA Case Search portal. Every figure is verified against the filed document it appears in, and the documents are delivered with the report.</p>
+      </details>
+      <details class="faq-accordion">
+        <summary class="faq-q">How is this different from a verdict database?</summary>
+        <p class="faq-a">Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.</p>
+      </details>
+      <details class="faq-accordion">
+        <summary class="faq-q">Do you cover class action settlements?</summary>
+        <p class="faq-a">PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate. They resolve different claims and are never mixed in the same statistic.</p>
+      </details>
+      <details class="faq-accordion">
+        <summary class="faq-q">Is this legal advice?</summary>
+        <p class="faq-a">No. Vemor Consulting LLC is not a law firm. Reports are an informational reference for licensed attorneys' independent judgment.</p>
+      </details>
+    </div>
+  </section>
 
   <!-- DISCLAIMER -->
   <section style="padding-top:48px; padding-bottom:48px;">
@@ -241,4 +377,62 @@ const faqSchema = {
       these reports.
     </p>
   </section>
+
+  <!-- FORM HANDLERS + GA4 EVENTS -->
+  <script is:inline>
+    function handleCompsForm(formEl, successEl, typeName) {
+      formEl.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(formEl);
+        var reqType = data.get('request-type') || typeName;
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString(),
+        })
+          .then(function () {
+            formEl.style.display = 'none';
+            successEl.classList.add('visible');
+            if (typeof gtag === 'function') {
+              gtag('event', 'comps_form_submit', { request_type: reqType });
+              if (reqType === 'Sample report') {
+                gtag('event', 'comps_sample_request');
+              }
+            }
+          })
+          .catch(function () {
+            window.location.href = 'mailto:comps@vemor.ai?subject=Vemor Comps — ' +
+              encodeURIComponent(reqType) + '&body=' +
+              encodeURIComponent('Firms: ' + data.get('firms') + '\nName: ' + data.get('name') + '\nEmail: ' + data.get('email'));
+          });
+      });
+    }
+
+    var compsForm = document.getElementById('compsForm');
+    var compsSuccess = document.getElementById('compsSuccess');
+    if (compsForm) handleCompsForm(compsForm, compsSuccess, 'Single report');
+
+    var sampleForm = document.getElementById('sampleForm');
+    var sampleSuccess = document.getElementById('sampleSuccess');
+    if (sampleForm) handleCompsForm(sampleForm, sampleSuccess, 'Sample report');
+
+    // GA4: FAQ accordion opens
+    document.querySelectorAll('.faq-accordion').forEach(function (el) {
+      el.addEventListener('toggle', function () {
+        if (el.open && typeof gtag === 'function') {
+          gtag('event', 'comps_faq_open', { question: el.querySelector('summary').textContent });
+        }
+      });
+    });
+
+    // GA4: mailto fallback click
+    var mailto = document.getElementById('compsMailto');
+    if (mailto) {
+      mailto.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'comps_mailto_click');
+        }
+      });
+    }
+  </script>
 </Base>
