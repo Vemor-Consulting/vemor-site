@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+
+const terms = [
+  {
+    t: 'PAGA settlement comparable ("comp")',
+    d: 'A data point from a publicly filed PAGA settlement — gross amount, exposure denominator, fee structure — used to benchmark the value of a similar claim in negotiation or mediation. The unit of currency in settlement talks.',
+  },
+  {
+    t: 'Gross settlement',
+    d: 'The total amount the defendant pays to resolve the case — the headline number, before attorney fees, costs, administration, and enhancement awards come out of it.',
+  },
+  {
+    t: 'PAGA allocation',
+    d: 'In a class settlement with PAGA claims, the slice of the gross specifically allocated to PAGA civil penalties. Often a small carve-out — and never the same thing as the gross, though the two are frequently confused.',
+  },
+  {
+    t: '$ / workweek ($/WW)',
+    d: 'Gross settlement divided by the total workweeks stated in the filing. The most common benchmark rate for workweek-denominated settlements. Comparing $/WW across similar cases is the fastest way to see whether a demand is above or below market.',
+  },
+  {
+    t: '$ / pay period ($/PP)',
+    d: 'Gross settlement divided by total PAGA pay periods. The benchmark rate for pay-period-denominated (typically PAGA-only) settlements. Never interchangeable with $/WW — the units measure different things.',
+  },
+  {
+    t: 'Workweeks vs. pay periods vs. workdays',
+    d: 'Three different exposure denominators, usually defined in the same clause of a settlement agreement. They are never convertible into one another from the filing alone, and a database that converts between them is manufacturing data.',
+  },
+  {
+    t: 'Aggrieved employees',
+    d: 'The employees on whose behalf PAGA penalties are claimed — a statutorily defined group. Not the same as class members: a Class + PAGA hybrid typically has both, and the counts differ.',
+  },
+  {
+    t: 'Class members',
+    d: 'The employees covered by the class settlement component. Usually a larger group than the aggrieved employees, measured over a different period.',
+  },
+  {
+    t: 'PAGA-only vs. Class + PAGA hybrid',
+    d: 'A PAGA-only settlement resolves only PAGA civil penalty claims. A hybrid resolves a class action with a PAGA allocation carved out of the gross. Their economics are structurally different and should never be mixed in one statistic.',
+  },
+  {
+    t: 'Pre-reform vs. post-reform',
+    d: 'The July 2024 PAGA amendments (AB 2288 / SB 92) changed the penalty regime for cases whose LWDA notice was filed on or after June 19, 2024. Comparables from the two regimes carry different weight and should be labeled — everywhere.',
+  },
+  {
+    t: 'LWDA notice',
+    d: "The written notice an employee must file with California's Labor and Workforce Development Agency before suing under PAGA. Its date determines which statutory regime governs the case.",
+  },
+  {
+    t: 'Escalator clause',
+    d: 'A settlement term that increases the gross if the actual workweeks or pay periods exceed the estimate by more than a stated percentage. A tell for how confident the parties were in the stated denominator.',
+  },
+  {
+    t: 'LWDA split',
+    d: 'The statutory division of PAGA penalties between the state and the aggrieved employees — 75/25 pre-reform, 65/35 post-reform.',
+  },
+  {
+    t: 'Enhancement (service) award',
+    d: 'The payment to the named plaintiff for representing the group, paid out of the gross. Typically $5,000–$15,000 in the filings we track.',
+  },
+  {
+    t: 'Figure status: proposed / executed / approved',
+    d: 'Where the numbers in a filing sit in the settlement lifecycle: proposed in motion papers, executed in a signed agreement, approved in a court order. Higher status means more authority — a principle a comps database should honor when documents conflict.',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  name: 'PAGA Settlement Glossary',
+  description: 'Definitions of the terms used in PAGA settlement comparables and Vemor Comps reports.',
+  hasDefinedTerm: terms.map((x) => ({ '@type': 'DefinedTerm', name: x.t, description: x.d })),
+};
+---
+<Base
+  title="PAGA Settlement Glossary | $/Workweek, Pay Periods, Aggrieved Employees & More"
+  description="Plain-English definitions of PAGA settlement terms: $/workweek, pay periods, aggrieved employees vs class members, PAGA allocation, pre- vs post-reform, escalator clauses, and more."
+  schema={[schema]}
+  path="/glossary"
+  hideWidget={true}
+>
+  <section class="hero" style="min-height:0; padding-bottom:24px;">
+    <span class="hero-tagline">Vemor Comps</span>
+    <h1>PAGA settlement terms.<br /><span class="gold">In plain English.</span></h1>
+    <p class="hero-sub">
+      The vocabulary of PAGA settlement comparables — defined the way the filings
+      actually use it.
+    </p>
+  </section>
+
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="prose" style="max-width:800px;">
+        {terms.map((x) => (
+          <>
+            <h2>{x.t}</h2>
+            <p>{x.d}</p>
+          </>
+        ))}
+        <p style="margin-top:32px;">
+          See how these figures are verified in practice: <a href="/methodology">our methodology</a>,
+          or <a href="/comps">Vemor Comps</a> itself.
+        </p>
+      </div>
+    </div>
+  </div>
+</Base>

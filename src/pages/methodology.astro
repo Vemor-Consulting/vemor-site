@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Vemor Comps Methodology',
+  description:
+    'How Vemor Comps turns California PAGA settlement filings into verified comparables: verbatim source verification, document-authority hierarchy, flagged-record discipline, and minimum-sample statistics.',
+};
+---
+<Base
+  title="Methodology | How Vemor Comps Verifies PAGA Settlement Data"
+  description="Every figure in a Vemor Comps report is matched verbatim to the filed court document. Read the standards: source verification, document hierarchy, flagged-record discipline, and minimum-sample statistics."
+  schema={[schema]}
+  path="/methodology"
+  hideWidget={true}
+>
+  <section class="hero" style="min-height:0; padding-bottom:24px;">
+    <span class="hero-tagline">Vemor Comps</span>
+    <h1>Methodology.<br /><span class="gold">Every number, checkable.</span></h1>
+    <p class="hero-sub">
+      A settlement comparable is only as good as the document behind it. These are the
+      standards every figure in a Vemor Comps report is held to — published so you can
+      hold us to them too.
+    </p>
+  </section>
+
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="prose" style="max-width:800px;">
+        <h2>1. Public sources, delivered with the report</h2>
+        <p>
+          All matters are drawn from proposed-settlement filings on the California
+          Department of Industrial Relations PAGA Case Search portal — a public
+          government records source. Every report ships with the underlying filed
+          documents, so any figure can be checked independently, by anyone, at any
+          time. We consider a comparable that cannot be traced to its filing to be
+          worthless, and we do not publish them.
+        </p>
+
+        <h2>2. Verbatim verification, not summarization</h2>
+        <p>
+          Settlement economics are extracted from the filed documents, and every
+          extracted figure must be matched <em>verbatim</em> to the source text and the
+          page it appears on. A figure whose supporting passage cannot be located in
+          the document is discarded — not estimated, not approximated, not "probably
+          right." A missing value is always acceptable in a Vemor report; a plausible
+          guess never is.
+        </p>
+
+        <h2>3. Flagged means excluded</h2>
+        <p>
+          Extracted records pass through automated consistency checks — internal
+          reconciliation of settlement components, cross-document comparison, range
+          and plausibility tests. Records that fail any check are flagged, shown in
+          the report with the reason stated in plain English, and
+          <strong>excluded from every benchmark statistic</strong>. A flagged record is
+          never silently folded into a median. When human review resolves the issue on
+          documented evidence, the decision is recorded durably — and automatically
+          reopened if new conflicting evidence later appears.
+        </p>
+
+        <h2>4. Documents outrank each other — and we honor the hierarchy</h2>
+        <p>
+          A PAGA matter generates many filings, and they do not carry equal weight. A
+          court-approved order outranks an executed settlement agreement; an executed
+          agreement outranks a proposed one; operative documents outrank administrative
+          notices. Where documents conflict, the higher-authority document's figures
+          control and the conflict is disclosed. Where equal-authority documents
+          conflict with no basis to resolve them, the record is flagged and held out of
+          the statistics until the documents are read.
+        </p>
+
+        <h2>5. Units are never mixed, converted, or invented</h2>
+        <p>
+          Pay periods, workweeks, and workdays are different numbers. Each is reported
+          only as stated in the filing; none is derived from another. Statistics are
+          computed only within like cohorts — PAGA-only pay-period matters, workweek
+          matters, and Class + PAGA hybrids are never blended into one median. The
+          single labeled exception: a workweek rate derived from a stated workday count
+          divided by five, always marked as derived.
+        </p>
+
+        <h2>6. Small samples don't get statistics</h2>
+        <p>
+          A median needs a minimum number of eligible records before we will print
+          one; quartiles need more. Below those thresholds, the individual comparables
+          still appear — the summary statistic does not. A precise-looking number
+          computed over three settlements is not information; it is decoration, and we
+          decline to produce it.
+        </p>
+
+        <h2>7. Pre- and post-reform are labeled, always</h2>
+        <p>
+          The July 2024 PAGA amendments changed the penalty regime. Every matter is
+          labeled pre- or post-reform by its LWDA notice date, and era-split medians
+          are reported wherever the sample supports them — because comparables from
+          different statutory regimes should be weighed differently, and the report
+          should say so on its face.
+        </p>
+
+        <h2>8. What this is, and isn't</h2>
+        <p>
+          Vemor Comps is an informational reference built from public records for
+          licensed attorneys' independent judgment. It is not legal advice, and Vemor
+          Consulting LLC is not a law firm. The full disclaimer accompanies every
+          report.
+        </p>
+
+        <p style="margin-top:32px;">
+          <a href="/comps" class="btn-primary">See Vemor Comps</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</Base>
