@@ -37,7 +37,7 @@ const faqSchema = {
       name: 'How is this different from a verdict database?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.',
+        text: 'Verdict and settlement databases summarize; Vemor Comps verifies. Every number is programmatically matched to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.',
       },
     },
     {
@@ -61,7 +61,7 @@ const faqSchema = {
 ---
 <Base
   title="Vemor Comps | PAGA Settlement Data & Comparables for California Attorneys"
-  description="Vemor Comps turns California's public PAGA filings into verified settlement comparables — every figure matched verbatim to the filed document. Reports, working Excel, and source documents for mediation prep. Updated daily."
+  description="Vemor Comps turns California's public PAGA filings into verified settlement comparables — every figure matched to supporting text in the filed document. Reports, working Excel, and source documents for mediation prep. Updated daily."
   schema={[serviceSchema, faqSchema]}
   path="/comps"
   hideWidget={true}
@@ -72,7 +72,7 @@ const faqSchema = {
     <h1>Settlement data you can verify.<br /><span class="gold">Down to the filing.</span></h1>
     <p class="hero-sub">
       Vemor Comps turns California's public PAGA settlement filings into comparables
-      attorneys actually cite: every figure machine-extracted, verified verbatim against
+      attorneys actually cite: every figure machine-extracted, programmatically matched against
       the source document, and delivered with the filings attached.
     </p>
     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:32px;">
@@ -188,7 +188,7 @@ const faqSchema = {
     <div class="prose" style="max-width:800px;">
       <p>
         Every extracted figure must match the exact text of the filed document it came
-        from. A number that can't be verified verbatim is withheld, not guessed.
+        from. A number whose source match fails is withheld, not guessed.
       </p>
       <p>
         Records that fail internal consistency checks are visibly flagged, shown with the
@@ -362,7 +362,7 @@ const faqSchema = {
       </details>
       <details class="faq-accordion">
         <summary class="faq-q">How is this different from a verdict database?</summary>
-        <p class="faq-a">Verdict and settlement databases summarize; Vemor Comps verifies. Every number is matched verbatim to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.</p>
+        <p class="faq-a">Verdict and settlement databases summarize; Vemor Comps verifies. Every number is programmatically matched to source text, flagged records are excluded from statistics, and the filings ship with the report so your team can check any figure independently.</p>
       </details>
       <details class="faq-accordion">
         <summary class="faq-q">Do you cover class action settlements?</summary>

@@ -6,12 +6,12 @@ const schema = {
   '@type': 'WebPage',
   name: 'Vemor Comps Methodology',
   description:
-    'How Vemor Comps turns California PAGA settlement filings into verified comparables: verbatim source verification, document-authority hierarchy, flagged-record discipline, and minimum-sample statistics.',
+    'How Vemor Comps turns California PAGA settlement filings into verified comparables: programmatic source matching, document-authority hierarchy, flagged-record discipline, and minimum-sample statistics.',
 };
 ---
 <Base
   title="Methodology | How Vemor Comps Verifies PAGA Settlement Data"
-  description="Every figure in a Vemor Comps report is matched verbatim to the filed court document. Read the standards: source verification, document hierarchy, flagged-record discipline, and minimum-sample statistics."
+  description="Every figure in a Vemor Comps report is programmatically matched to supporting text in the filed court document. Read the standards: source matching, document hierarchy, flagged-record discipline, and minimum-sample statistics."
   schema={[schema]}
   path="/methodology"
   hideWidget={true}
@@ -39,14 +39,15 @@ const schema = {
           worthless, and we do not publish them.
         </p>
 
-        <h2>2. Verbatim verification, not summarization</h2>
+        <h2>2. Source matching, not summarization</h2>
         <p>
           Settlement economics are extracted from the filed documents, and every
-          extracted figure must be matched <em>verbatim</em> to the source text and the
-          page it appears on. A figure whose supporting passage cannot be located in
-          the document is discarded — not estimated, not approximated, not "probably
-          right." A missing value is always acceptable in a Vemor report; a plausible
-          guess never is.
+          published figure is <em>programmatically matched to supporting source text</em>
+          on the page it appears (matching tolerates OCR artifacts and formatting
+          differences — it never tolerates a different number). A figure whose
+          supporting passage cannot be located in the document is withheld or held for
+          review — not estimated, not approximated, not "probably right." A missing
+          value is always acceptable in a Vemor report; a plausible guess never is.
         </p>
 
         <h2>3. Flagged means excluded</h2>
