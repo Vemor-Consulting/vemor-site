@@ -568,7 +568,7 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 /* Nav collapses earlier than the page layout: 7 items need the room. */
-@media (max-width: 1080px) {
+@media (max-width: 860px) {
   nav { padding: 12px 22px; }
   .nav-links {
     display: none;
@@ -609,3 +609,6 @@ footer {
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
   .story-stats { grid-template-columns: 1fr; }
 }
+
+.comps-signin { display: inline-block; margin-left: 8px; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; align-self: center; }
+.comps-signin:hover { color: var(--gold); }
