@@ -175,3 +175,61 @@ sign-out. Remaining product-experience gaps, ranked:
 - The smog-shop case study. Specific beats slick.
 - The umbrella structure itself. Holding-brand + product is how this scales to
   "Vemor <X> Comps" in other jurisdictions.
+
+---
+
+## Addendum (same day): Gio's revisions + automation-market scan
+
+**Revisions accepted:** "If Vemor disappeared tomorrow" slogan is out (candidates
+below, Gio to pick). Mission broadens from SMB-only to businesses of all sizes.
+"1,000+ visits" leaves the homepage (bio stats live on About; homepage stats must
+be CLIENT outcomes). Sign-in label is audience-neutral: shipped as "Already a
+member? Sign in" on /comps hero (no "attorney" gatekeeping — interns and
+paralegals sign in too). Nav breakpoint fixed 1080 -> 860. White/gold stays.
+
+**Scan: Zapier, Smith.ai, n8n, Harvey — the five patterns that matter to us:**
+
+1. **Outcome-verb heroes.** Smith.ai: "Answer every call, book the consult, sign
+   more clients." Nobody leads with philosophy; they lead with what the buyer
+   gets, in verbs.
+2. **n8n's headline IS our niche**: "AI agents and workflows you can see and
+   control." Transparency/control as the #1 message, validated at 200k GitHub
+   stars. Vemor is the operator-language version of this position.
+3. **Stats are customer outcomes, never founder bio.** "42+ hrs saved/week"
+   (Zapier), "$42K/yr saved" (Smith), "saved 1,000 hours at Huel" (n8n),
+   "25+ hrs/month saved" (Harvey). Our homepage equivalents: 30+ hrs/week
+   eliminated (smog client), Month-1 payback, 20,365 matters tracked, 24/7.
+4. **Show the product.** Harvey: real screenshots; n8n: live workflow viz.
+   Confirms P1 (report imagery, app screenshot, live counters).
+5. **Smith.ai is the closest analog** (AI phones, SMB + law firms): they run ONE
+   brand with legal-specialized flows and outcome stats per audience — the same
+   audience-routing fix we prescribed. Also: transparent per-call pricing as a
+   trust weapon (a later decision for Voice).
+
+**Slogan candidates to replace "If Vemor disappeared tomorrow":**
+
+- A. "You own the system. We just run it."
+- B. "AI you can check. Systems you can keep."
+- C. "No lock-in. No black boxes. No hostages."
+- D. "Everything we build, you can verify. Everything we run, you can keep."
+- E. "Leave anytime. That's why clients stay."
+
+Recommended: **B** as the brand line (unifies Comps verification + services
+exit-safety, works everywhere from homepage to pitch decks), with **A** as the
+section header where the old slogan sat.
+
+**Mission block v2 (all business sizes):**
+
+> **Why Vemor exists**
+> AI is remaking how business runs. The only question is whether it happens to
+> you or for you. Vemor exists to put working AI in the hands of the people who
+> actually run things — solo operators, family shops, growing firms, enterprise
+> teams — and to give them their time back first. We build systems you can
+> check, you can keep, and you can leave — which is exactly why nobody does.
+> Life's too short for busywork. That's not a tagline. It's the product spec.
+
+**Homepage stat row v2 (replaces bio stats):**
+`30+ hrs/week` busywork eliminated for a single client · `Month 1` typical
+payback · `20,000+` legal matters tracked and verified · `24/7` systems running
+while you sleep. ("14 years / 1,000 visits" move to About, reframed as: "We
+didn't study these problems. We stood in them.")
