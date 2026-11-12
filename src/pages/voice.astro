@@ -4,17 +4,18 @@ import Base from '../layouts/Base.astro';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'AI phone agent / bilingual AI receptionist for small business',
+  serviceType: 'Bilingual AI phone agent',
   provider: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
   description: 'Vemor Voice: a managed bilingual (English/Spanish) AI phone agent that answers every call 24/7, books appointments, and recovers missed calls. Flat monthly rate.',
   areaServed: ['United States', 'Mexico'],
 };
 ---
 <Base
-  title="Vemor Voice | AI Voice Agent & Missed-Call Answering Service, San Diego"
-  description="Vemor Voice is a bilingual AI voice agent for small business — answers every missed call 24/7 in English and Spanish, books appointments, and recovers lost calls. Serving San Diego and beyond. Try the live demo."
+  title="Vemor Voice | Bilingual AI Voice Agent, English and Spanish"
+  description="Vemor Voice is a bilingual AI voice agent that answers every missed call 24/7 in English and Spanish, books appointments, and recovers lost calls. Serving San Diego and beyond. Try the live demo."
   schema={schema}
   path="/voice"
+  showWidget={true}
 >
   <section class="hero" style="min-height:0; padding-bottom:60px;">
     <span class="hero-tagline">Vemor Voice</span>
@@ -115,7 +116,7 @@ const schema = {
         <span class="label">What It Costs</span>
         <h2 class="title">Priced against a missed call, not against software.</h2>
         <p class="sub" style="margin-bottom:0;">
-          Vemor Voice runs at a flat monthly rate from <strong style="color:var(--text);">$500/month</strong>,
+          Vemor Voice runs at a flat monthly rate, scoped to your call volume, with
           everything included: the agent, the number, the bookings, the weekly report,
           and Vemor managing it. One recovered job a week typically covers it. A part-time
           receptionist costs four to six times more and goes home at 5.

@@ -1,3 +1,7 @@
 # Netlify redirects
 # vemor.consulting 301s are configured at the domain level.
 /paga    /comps    301
+
+# Spanish home is built as es.html next to the es/ folder; make both spellings resolve.
+/es     /es.html    200
+/es/    /es.html    200

@@ -8,17 +8,39 @@ interface Props {
   schema?: object | object[];
   /** Path for canonical URL, e.g. "/voice". Defaults to current URL. */
   path?: string;
-  /** Hide the Sofia/Vapi widget on this page (e.g. /comps targets attorneys, not SMBs). */
-  hideWidget?: boolean;
+  /** Show the Sofia/Vapi voice demo widget. Only the Voice page does. */
+  showWidget?: boolean;
+  /** Page language. Spanish pages live under /es. */
+  lang?: 'en' | 'es';
+  /** True when this page exists in both languages at the same slug (/x and /es/x). */
+  translated?: boolean;
 }
 
-const { title, description, schema, path, hideWidget } = Astro.props;
+const { title, description, schema, path, showWidget = false, lang = 'en', translated = false } = Astro.props;
 const canonical = new URL(path ?? Astro.url.pathname, Astro.site).href.replace(/\.html$/, '');
+
+// Language switch: a translated page links to its counterpart, anything else to the other home page.
+const here = (path ?? Astro.url.pathname).replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const enPath = lang === 'es' ? here.replace(/^\/es/, '') || '/' : here;
+const esPath = enPath === '/' ? '/es' : `/es${enPath}`;
+const enHref = lang === 'es' ? (translated ? enPath : '/') : here;
+const esHref = lang === 'es' ? here : (translated ? esPath : '/es');
+const abs = (p: string) => new URL(p, Astro.site).href;
+
+const base = lang === 'es' ? '/es' : '';
+const nav = {
+  en: { builds: 'Builds', operations: 'Operations', products: 'Products', about: 'About', contact: 'Contact', cta: 'Book a Call',
+        home: 'Vemor home', menu: 'Menu', langLabel: 'Language', footBuilds: 'Custom Builds', footOps: 'Managed AI Operations',
+        terms: 'Terms', privacy: 'Privacy', place: 'San Diego, CA · English and Spanish' },
+  es: { builds: 'Proyectos', operations: 'Operaciones', products: 'Productos', about: 'Nosotros', contact: 'Contacto', cta: 'Agenda una llamada',
+        home: 'Inicio de Vemor', menu: 'Menú', langLabel: 'Idioma', footBuilds: 'Proyectos a la medida', footOps: 'Operaciones de IA administradas',
+        terms: 'Términos', privacy: 'Privacidad', place: 'San Diego, CA · Español e inglés' },
+}[lang];
 
 // Organization schema ships on every page; page-specific schema gets appended.
 const orgSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': 'ProfessionalService',
   '@id': 'https://vemor.ai/#organization',
   name: 'Vemor',
   legalName: 'Vemor Consulting LLC',
@@ -28,7 +50,6 @@ const orgSchema = {
   email: 'gio@vemor.ai',
   telephone: '+18584226344',
   foundingDate: '2025-02',
-  priceRange: '$$',
   founder: { '@type': 'Person', name: 'Giovanni Vega Garcia' },
   address: { '@type': 'PostalAddress', addressLocality: 'San Diego', addressRegion: 'CA', addressCountry: 'US' },
   areaServed: ['San Diego', 'United States', 'Mexico'],
@@ -37,13 +58,20 @@ const orgSchema = {
 const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [schema]) : [])];
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  {translated && (
+    <>
+      <link rel="alternate" hreflang="en" href={abs(enPath)} />
+      <link rel="alternate" hreflang="es" href={abs(esPath)} />
+      <link rel="alternate" hreflang="x-default" href={abs(enPath)} />
+    </>
+  )}
   <link rel="icon" type="image/png" href="/lion.png" />
   <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -53,6 +81,7 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://vemor.ai/logo.png" />
   <meta property="og:site_name" content="Vemor" />
+  <meta property="og:locale" content={lang === 'es' ? 'es_MX' : 'en_US'} />
   <meta name="twitter:card" content="summary" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,19 +101,24 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
 </head>
 <body>
   <nav>
-    <a href="/" class="nav-brand" aria-label="Vemor home">
-      <img src="/lion.png" alt="Vemor lion logo" class="nav-logo" />
+    <a href={base || '/'} class="nav-brand" aria-label={nav.home}>
+      <img src="/lion.png" alt="Vemor" class="nav-logo" />
       <span class="nav-name">Vemor</span>
     </a>
-    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="nav-toggle" aria-label={nav.menu} onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
-      <li><a href="/voice">Voice</a></li>
-      <li><a href="/builds">Builds</a></li>
-      <li><a href="/operations">Operations</a></li>
-      <li><a href="/comps">Comps</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="https://Vemor.as.me/" class="nav-cta">Book a Call</a></li>
+      <li><a href={`${base}/builds`}>{nav.builds}</a></li>
+      <li><a href={`${base}/operations`}>{nav.operations}</a></li>
+      <li><a href={`${base || '/'}#products`}>{nav.products}</a></li>
+      <li><a href={`${base}/about`}>{nav.about}</a></li>
+      <li><a href={`${base}/contact`}>{nav.contact}</a></li>
+      <li>
+        <div class="lang-switch" role="group" aria-label={nav.langLabel}>
+          <a href={enHref} hreflang="en" lang="en" class={lang === 'en' ? 'on' : ''} aria-current={lang === 'en' ? 'true' : undefined} title="English">EN</a>
+          <a href={esHref} hreflang="es" lang="es" class={lang === 'es' ? 'on' : ''} aria-current={lang === 'es' ? 'true' : undefined} title="Español">ES</a>
+        </div>
+      </li>
+      <li><a href="https://Vemor.as.me/" class="nav-cta">{nav.cta}</a></li>
     </ul>
   </nav>
 
@@ -98,17 +132,18 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
       <span class="footer-name">Vemor</span>
     </div>
     <ul class="footer-links">
-      <li><a href="/voice">Vemor Voice</a></li>
+      <li><a href={`${base}/builds`}>{nav.footBuilds}</a></li>
+      <li><a href={`${base}/operations`}>{nav.footOps}</a></li>
       <li><a href="/comps">Vemor Comps</a></li>
-      <li><a href="/builds">Custom Builds</a></li>
-      <li><a href="/operations">Managed AI Operations</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href={`${base || '/'}#products`}>Pizarrón</a></li>
+      <li><a href="/voice">Vemor Voice</a></li>
+      <li><a href={`${base}/about`}>{nav.about}</a></li>
       <li><a href="mailto:gio@vemor.ai">gio@vemor.ai</a></li>
     </ul>
-    <span class="footer-copy">© {new Date().getFullYear()} Vemor Consulting LLC · San Diego, CA · English y Español · <a href="/terms" style="color:var(--text-muted);">Terms</a> · <a href="/privacy" style="color:var(--text-muted);">Privacy</a></span>
+    <span class="footer-copy">© {new Date().getFullYear()} Vemor Consulting LLC · {nav.place} · <a href="/terms" style="color:var(--text-muted);">{nav.terms}</a> · <a href="/privacy" style="color:var(--text-muted);">{nav.privacy}</a></span>
   </footer>
 
-  {!hideWidget && (
+  {showWidget && (
     <script is:inline>
       (function (d, t) {
         var g = d.createElement(t), s = d.getElementsByTagName(t)[0];

@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props { lang?: 'en' | 'es'; }
+const { lang = 'en' } = Astro.props;
+const base = lang === 'es' ? '/es' : '';
+
+const copy = {
+  en: {
+    metaTitle: 'Contact Vemor | AI Systems Built, Verified, and Operated',
+    metaDesc: 'Talk to Vemor about an operations assessment, a custom build, managed AI operations, Vemor Comps, or Pizarrón. Book a call or send a message. English and Spanish. San Diego, CA.',
+    tag: 'Contact',
+    h1a: 'Tell us what you', h1b: 'can\'t afford to get wrong.',
+    sub: 'A first conversation, in English or Spanish. If automation is not worth it for your case, you will hear that too.',
+    waysTitle: 'Two ways to reach Vemor',
+    book: 'Book a call', bookRest: 'straight onto the calendar.',
+    email: 'Or email', emailRest: 'Answered within one business day.',
+    place: 'Serving the U.S. and Mexico, in English and Spanish.',
+    name: 'Name', namePh: 'Your name',
+    emailLabel: 'Email', emailPh: 'you@company.com',
+    company: 'Company', companyPh: 'Company or firm',
+    topic: 'What can Vemor help with?',
+    topics: [
+      ['assessment', 'An operations assessment'],
+      ['build', 'A custom build'],
+      ['operations', 'Managed AI Operations'],
+      ['comps', 'Vemor Comps (PAGA settlement data)'],
+      ['pizarron', 'Pizarrón (restaurant cost control)'],
+      ['other', 'Something else'],
+    ],
+    message: 'Message', messagePh: 'Tell us about the operation and the process you have in mind...',
+    send: 'Send Message',
+    sent: 'Message sent. You will hear back within one business day.',
+  },
+  es: {
+    metaTitle: 'Contacto | Vemor',
+    metaDesc: 'Habla con Vemor sobre un diagnóstico de operaciones, un proyecto a la medida, operaciones de IA administradas, Vemor Comps o Pizarrón. Agenda una llamada o envía un mensaje. Español e inglés. San Diego, CA.',
+    tag: 'Contacto',
+    h1a: 'Cuéntanos qué no te puedes', h1b: 'dar el lujo de hacer mal.',
+    sub: 'Una primera conversación, en español o en inglés. Si en tu caso no vale la pena automatizar, también te lo diremos.',
+    waysTitle: 'Dos formas de contactar a Vemor',
+    book: 'Agenda una llamada', bookRest: 'directo en el calendario.',
+    email: 'O escribe a', emailRest: 'Respondemos en un día hábil.',
+    place: 'Servicio en México y Estados Unidos, en español e inglés.',
+    name: 'Nombre', namePh: 'Tu nombre',
+    emailLabel: 'Correo', emailPh: 'tu@empresa.com',
+    company: 'Empresa', companyPh: 'Empresa o despacho',
+    topic: '¿En qué te puede ayudar Vemor?',
+    topics: [
+      ['assessment', 'Un diagnóstico de operaciones'],
+      ['build', 'Un proyecto a la medida'],
+      ['operations', 'Operaciones de IA administradas'],
+      ['comps', 'Vemor Comps (datos de acuerdos PAGA)'],
+      ['pizarron', 'Pizarrón (control de costos para restaurantes)'],
+      ['other', 'Otro tema'],
+    ],
+    message: 'Mensaje', messagePh: 'Cuéntanos sobre la operación y el proceso que tienes en mente...',
+    send: 'Enviar mensaje',
+    sent: 'Mensaje enviado. Te responderemos en un día hábil.',
+  },
+};
+const t = copy[lang];
+---
+<Base title={t.metaTitle} description={t.metaDesc} path={`${base}/contact`} lang={lang} translated={true}>
+  <section class="hero" style="min-height:0; padding-bottom:40px;">
+    <span class="hero-tagline">{t.tag}</span>
+    <h1>{t.h1a} <span class="gold">{t.h1b}</span></h1>
+    <p class="hero-sub">{t.sub}</p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="contact-grid">
+      <div>
+        <h2 class="title" style="font-size:1.5rem;">{t.waysTitle}</h2>
+        <p class="contact-line"><a href="https://Vemor.as.me/">{t.book}</a> {t.bookRest}</p>
+        <p class="contact-line">{t.email} <a href="mailto:gio@vemor.ai">gio@vemor.ai</a>. {t.emailRest}</p>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:24px;">
+          Vemor Consulting LLC · San Diego, California<br />
+          {t.place}
+        </p>
+      </div>
+      <div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="language" value={lang} />
+          <label>{t.name}
+            <input type="text" name="name" placeholder={t.namePh} required />
+          </label>
+          <label>{t.emailLabel}
+            <input type="email" name="email" placeholder={t.emailPh} required />
+          </label>
+          <label>{t.company}
+            <input type="text" name="company" placeholder={t.companyPh} />
+          </label>
+          <label>{t.topic}
+            <select name="topic">
+              {t.topics.map(([v, l]) => <option value={v}>{l}</option>)}
+            </select>
+          </label>
+          <label>{t.message}
+            <textarea name="message" placeholder={t.messagePh} rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn-primary" style="justify-content:center;">{t.send}</button>
+        </form>
+        <div class="contact-success" id="contactSuccess">{t.sent}</div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = e.target;
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      })
+        .then(function () {
+          form.style.display = 'none';
+          document.getElementById('contactSuccess').classList.add('visible');
+        })
+        .catch(function () {
+          var body = 'Name: ' + data.get('name') + '%0AEmail: ' + data.get('email') +
+            '%0ACompany: ' + data.get('company') + '%0ATopic: ' + data.get('topic') + '%0A%0A' + data.get('message');
+          window.location.href = 'mailto:gio@vemor.ai?subject=Vemor Inquiry from ' + data.get('name') + '&body=' + body;
+        });
+    });
+  </script>
+</Base>

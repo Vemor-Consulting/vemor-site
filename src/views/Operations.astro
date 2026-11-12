@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props { lang?: 'en' | 'es'; }
+const { lang = 'en' } = Astro.props;
+const base = lang === 'es' ? '/es' : '';
+
+const copy = {
+  en: {
+    metaTitle: 'Managed AI Operations | Built, Run, and Answered For | Vemor',
+    metaDesc: 'Vemor designs, builds, and operates AI systems in production: monitoring, exception handling, reporting, and one accountable team. For multi-location operators and professional firms in the U.S. and Mexico.',
+    schemaType: 'Managed AI operations',
+    schemaDesc: 'Managed AI operations: assessment, system architecture, custom builds, and ongoing operation with monitoring, exception handling, and reporting.',
+    tag: 'Managed AI Operations',
+    h1a: 'We build it. We run it.', h1b: 'We answer for it.',
+    sub: 'Most AI projects stall between the demo and the day someone has to depend on it. Managed AI Operations covers that distance. Vemor designs the system, builds it on the tools you already run, and stays accountable for it in production.',
+    cta: 'Book a Discovery Call',
+    procLabel: 'What You Are Buying',
+    procTitle: 'Assess. Architect. Build. Operate. Expand.',
+    steps: [
+      ['Assess', 'We map your operation: where the hours go, where the errors hide, what a fix is worth. You get a written plan whether or not we go further.'],
+      ['Architect', 'The system gets designed around what you already run: your POS, your ERP, your calendars, your spreadsheets. What to build, what to buy, what to leave alone.'],
+      ['Build', 'Automation, AI agents, databases, integrations, even hardware like RFID tracking. Tested on your real work before it goes live.'],
+      ['Operate', 'We monitor it, maintain it, and send reports that prove it is working. When something breaks at 6 AM, that is Vemor\'s problem, not yours.'],
+      ['Expand', 'Every report shows what else could be automated. When the first system has earned it, we take on the next one.'],
+    ],
+    workLabel: 'The Kind of Work This Covers',
+    workTitle: 'Systems in production today.',
+    workSub: 'Examples from systems Vemor built and operates:',
+    work: [
+      ['Daily reconciliation', 'Nightly reconciliation across a four-location operation, reading straight from the existing point-of-sale database. Payment errors and unauthorized discounts are flagged the same day instead of surfacing weeks later in accounting.'],
+      ['Physical asset tracking', 'RFID tracking for rental equipment across four locations, with an alert at closing when a unit is missing and not on an invoice. Hardware, software, and alerts, built as one system.'],
+      ['Document intelligence', 'A research engine that reads thousands of legal filings, extracts the numbers with evidence for every figure, validates them with hard arithmetic rules, and produces a benchmark report in seconds.'],
+    ],
+    blocks: [
+      [
+        ['How engagements are priced', 'Monthly, scoped to the systems under management. That covers architecture, the build, and the ongoing operation: a running system with a team accountable for it. Not advice. Not a license fee. Some companies shop for this under "fractional CTO." Vemor does not use the title. We build and run the systems a CTO would only plan.'],
+        ['Not sure yet?', 'Start with a paid operations assessment. A few days inside your workflow, then a written report: what to automate, what it costs, what it returns. If we go forward, the assessment rolls into the engagement. If not, you keep the plan.'],
+      ],
+      [
+        ['Good fit', 'Multi-location operators, professional firms, and owner-led or investor-backed companies with real volume moving through manual processes: reconciliation, reporting, intake, document review. Teams that work in English, Spanish, or both.'],
+        ['Bad fit', 'Anyone shopping for a magic AI button, a one-time script with no owner, or the cheapest possible vendor. This is a working relationship. Vemor takes on a small number of clients and stays accountable to every one of them.'],
+      ],
+    ],
+    finalTitle: 'Tell us what you can\'t afford to get wrong.',
+    finalSub: 'The first conversation costs nothing. You will get a straight answer on whether automation is worth it for your case. Sometimes the honest answer is no.',
+    cta2: 'Send a Message',
+  },
+  es: {
+    metaTitle: 'Operaciones de IA administradas | Vemor',
+    metaDesc: 'Vemor diseña, construye y opera sistemas de IA en producción: monitoreo, manejo de excepciones, reportes y un solo equipo responsable. Para operadores con varias sucursales y firmas profesionales en México y Estados Unidos.',
+    schemaType: 'Operaciones de IA administradas',
+    schemaDesc: 'Operaciones de IA administradas: diagnóstico, diseño del sistema, construcción a la medida y operación continua con monitoreo, manejo de excepciones y reportes.',
+    tag: 'Operaciones de IA administradas',
+    h1a: 'Lo construimos. Lo operamos.', h1b: 'Respondemos por él.',
+    sub: 'La mayoría de los proyectos de IA se atoran entre el demo y el día en que alguien tiene que depender de ellos. Ese tramo es el que cubrimos. Vemor diseña el sistema, lo construye sobre las herramientas que ya usas y responde por él en producción.',
+    cta: 'Agenda una llamada',
+    procLabel: 'Qué estás contratando',
+    procTitle: 'Diagnóstico. Diseño. Construcción. Operación. Expansión.',
+    steps: [
+      ['Diagnóstico', 'Mapeamos tu operación: dónde se van las horas, dónde se esconden los errores y cuánto vale resolverlo. Recibes un plan por escrito, sigamos adelante o no.'],
+      ['Diseño', 'El sistema se diseña alrededor de lo que ya usas: tu punto de venta, tu ERP, tus calendarios, tus hojas de cálculo. Qué construir, qué comprar y qué dejar como está.'],
+      ['Construcción', 'Automatización, agentes de IA, bases de datos, integraciones y hasta hardware como rastreo RFID. Probado con tu trabajo real antes de entrar en operación.'],
+      ['Operación', 'Lo vigilamos, le damos mantenimiento y enviamos reportes que comprueban que funciona. Si algo falla a las 6 de la mañana, el problema es de Vemor, no tuyo.'],
+      ['Expansión', 'Cada reporte muestra qué más se podría automatizar. Cuando el primer sistema se ganó la confianza, tomamos el siguiente.'],
+    ],
+    workLabel: 'El tipo de trabajo que cubre',
+    workTitle: 'Sistemas hoy en producción.',
+    workSub: 'Ejemplos de sistemas que Vemor construyó y opera:',
+    work: [
+      ['Conciliación diaria', 'Conciliación nocturna en una operación de cuatro sucursales, leyendo directo de la base de datos del punto de venta que ya tenían. Los errores de cobro y los descuentos no autorizados se detectan el mismo día, no semanas después en contabilidad.'],
+      ['Rastreo de activos físicos', 'Rastreo RFID de equipo de renta en cuatro sucursales, con una alerta al cierre cuando falta una unidad que no aparece en ninguna factura. Hardware, software y alertas, construidos como un solo sistema.'],
+      ['Inteligencia de documentos', 'Un motor de investigación que lee miles de expedientes legales, extrae las cifras con evidencia para cada una, las valida con reglas aritméticas fijas y genera un reporte comparativo en segundos.'],
+    ],
+    blocks: [
+      [
+        ['Cómo se cobra', 'Por mes, según los sistemas que administramos. Incluye el diseño, la construcción y la operación continua: un sistema funcionando y un equipo que responde por él. No es asesoría. No es una licencia. Hay empresas que buscan esto como "CTO fraccional". Vemor no usa ese título. Construimos y operamos los sistemas que un CTO solo planearía.'],
+        ['¿Todavía no estás seguro?', 'Empieza con un diagnóstico de operaciones pagado. Unos días dentro de tu proceso y luego un reporte por escrito: qué automatizar, cuánto cuesta y cuánto regresa. Si seguimos, el diagnóstico se abona al proyecto. Si no, te quedas con el plan.'],
+      ],
+      [
+        ['Para quién sí', 'Operadores con varias sucursales, firmas profesionales y empresas dirigidas por sus dueños o respaldadas por inversionistas, con volumen real pasando por procesos manuales: conciliación, reportes, recepción de solicitudes, revisión de documentos. Equipos que trabajan en español, en inglés o en los dos.'],
+        ['Para quién no', 'Quien busca un botón mágico de IA, un script de una sola vez sin responsable o al proveedor más barato. Esto es una relación de trabajo. Vemor toma pocos clientes y responde ante cada uno.'],
+      ],
+    ],
+    finalTitle: 'Cuéntanos qué no te puedes dar el lujo de hacer mal.',
+    finalSub: 'La primera conversación no cuesta. Te diremos sin rodeos si en tu caso vale la pena automatizar. A veces la respuesta honesta es que no.',
+    cta2: 'Envía un mensaje',
+  },
+};
+const t = copy[lang];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: t.schemaType,
+  provider: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  description: t.schemaDesc,
+  areaServed: ['United States', 'Mexico'],
+};
+---
+<Base title={t.metaTitle} description={t.metaDesc} schema={schema} path={`${base}/operations`} lang={lang} translated={true}>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">{t.tag}</span>
+    <h1>{t.h1a}<br /><span class="gold">{t.h1b}</span></h1>
+    <p class="hero-sub">{t.sub}</p>
+    <div class="hero-ctas">
+      <a href="https://Vemor.as.me/" class="btn-primary">{t.cta}</a>
+    </div>
+  </section>
+
+  <div class="section-full soft">
+    <div class="inner">
+      <span class="label">{t.procLabel}</span>
+      <h2 class="title">{t.procTitle}</h2>
+      <div class="steps">
+        {t.steps.map(([h, p], i) => (
+          <div class="step">
+            <div class="step-num">{i + 1}</div>
+            <h3>{h}</h3>
+            <p>{p}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <span class="label">{t.workLabel}</span>
+    <h2 class="title">{t.workTitle}</h2>
+    <p class="sub">{t.workSub}</p>
+    <div class="cards-3">
+      {t.work.map(([h, p]) => (
+        <div class="card"><h3>{h}</h3><p>{p}</p></div>
+      ))}
+    </div>
+  </section>
+
+  <div class="section-full soft">
+    <div class="inner">
+      <div class="story-grid">
+        {t.blocks.map((col) => (
+          <div class="story-content">
+            {col.map(([h, p]) => (<><h4>{h}</h4><p>{p}</p></>))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section style="text-align:center;">
+    <h2 class="title">{t.finalTitle}</h2>
+    <p class="sub" style="margin-left:auto; margin-right:auto;">{t.finalSub}</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">{t.cta}</a>
+      <a href={`${base}/contact`} class="btn-secondary">{t.cta2}</a>
+    </div>
+  </section>
+</Base>

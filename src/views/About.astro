@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props { lang?: 'en' | 'es'; }
+const { lang = 'en' } = Astro.props;
+const base = lang === 'es' ? '/es' : '';
+
+const copy = {
+  en: {
+    metaTitle: 'About Vemor | Built by an Operator, Checked Like a Claim',
+    metaDesc: 'Vemor was founded by Giovanni Vega after six years running multi-site operations and eight years as a field claims adjuster. Operations discipline and claims rigor, applied to AI systems. San Diego.',
+    tag: 'About Vemor',
+    h1a: 'Built by an operator.', h1b: 'Checked like a claim.',
+    sub: 'Vemor was founded by someone who ran operations for six years, then spent eight more verifying other people\'s numbers for a living. Both habits are in everything we build.',
+    prose: [
+      'Vemor was founded by <strong>Giovanni Vega</strong>. Gio, to everyone who knows him. First-generation college graduate, son of immigrants, at home in two languages.',
+      'He spent <strong>six years managing vehicle inspection operations</strong>: three facilities, eighteen employees, the counter, the vendors, the payroll, the close-out at 9 PM. He knows what an operation looks like from the inside, and how much of it runs on manual checking that nobody has time to do well.',
+      'Then <strong>eight years as a field claims adjuster</strong> for GEICO, Wawanesa, and Farmers, with more than a thousand shop visits across Southern California. The job is simple to describe: someone hands you an estimate, and nothing gets paid until you have seen the damage. Every figure has to tie to evidence, because every figure is money.',
+      'Then he taught himself to build. Python, data pipelines, AI agents, databases, hardware. What he built came out shaped by both careers: systems that cite their sources, flag their own exceptions, and withhold a number before they guess one.',
+      'AI made software easy to build. It did not make it trustworthy. That part is still operations work, and it is the work Vemor does.',
+    ],
+    quote: '"The technology was never the point. Your time is."',
+    by: 'Gio Vega, Founder',
+    stats: [
+      ['14+', 'years in operations and claims'],
+      ['1,000+', 'shop visits in the field'],
+      ['MBA', 'STEM-certified, University of San Diego'],
+      ['EN / ES', 'working languages, both native'],
+    ],
+    list: [
+      ['Generative AI certificate,', 'IE Business School: Unlocking Enterprise Value.'],
+      ['Studying what Vemor practices.', 'Preparing doctoral research on how organizations make AI commitments they can survive.'],
+      ['In production today.', 'Reconciliation pipelines, RFID tracking, bilingual voice agents, legal document intelligence.'],
+      ['Both sides of the border.', 'Based in San Diego, working with operators in the U.S. and Mexico.'],
+    ],
+    products: 'The same discipline now ships as products. <a href="/comps" style="color:var(--gold);">Vemor Comps</a> applies it to California\'s public PAGA filings, giving attorneys settlement data they can verify line by line. <a href="PRODUCTS" style="color:var(--gold);">Pizarrón</a> applies it to restaurant costs, where every number in the weekly plan links back to an invoice, a count, or a sale.',
+    whyLabel: 'Why Vemor Exists',
+    why: 'AI is remaking how business runs. The only question is whether it happens <em>to</em> you or <em>for</em> you. Vemor builds AI that takes real work off real plates and holds it to an operator\'s standard: checkable, traceable, accountable.',
+    star: ['"AI that does the work &mdash; ', 'and shows the work.', '"'],
+    talk: 'Let\'s talk.', cta1: 'Book a Call', cta2: 'Send a Message',
+  },
+  es: {
+    metaTitle: 'Nosotros | Vemor: construido por un operador, revisado por un ajustador',
+    metaDesc: 'Vemor fue fundada por Giovanni Vega tras seis años dirigiendo operaciones en varias sucursales y ocho como ajustador de seguros en campo. Disciplina operativa y rigor de ajustador, aplicados a sistemas de IA. San Diego.',
+    tag: 'Nosotros',
+    h1a: 'Construido por un operador.', h1b: 'Revisado por un ajustador.',
+    sub: 'A Vemor la fundó alguien que dirigió operaciones durante seis años y luego pasó ocho más verificando los números de otros. Las dos costumbres están en todo lo que construimos.',
+    prose: [
+      'Vemor fue fundada por <strong>Giovanni Vega</strong>. Gio, para quienes lo conocen. Primera generación de su familia en graduarse de la universidad, hijo de inmigrantes, con el español y el inglés como lenguas propias.',
+      'Pasó <strong>seis años dirigiendo centros de verificación vehicular</strong>: tres sucursales, dieciocho empleados, el mostrador, los proveedores, la nómina y el corte de caja a las 9 de la noche. Conoce una operación por dentro, y sabe cuánto de ella depende de revisiones manuales que nadie tiene tiempo de hacer bien.',
+      'Después, <strong>ocho años como ajustador de seguros en campo</strong> para GEICO, Wawanesa y Farmers, con más de mil visitas a talleres en el sur de California. El trabajo se explica fácil: alguien te entrega un presupuesto y no se paga nada hasta que ves el daño. Cada cifra tiene que estar respaldada por evidencia, porque cada cifra es dinero.',
+      'Luego aprendió a construir por su cuenta. Python, flujos de datos, agentes de IA, bases de datos, hardware. Lo que construyó salió marcado por las dos carreras: sistemas que citan sus fuentes, señalan sus propias excepciones y prefieren no dar un número antes que adivinarlo.',
+      'La IA hizo fácil construir software. No lo hizo confiable. Esa parte sigue siendo trabajo de operaciones, y es el trabajo que hace Vemor.',
+    ],
+    quote: '"La tecnología nunca fue lo importante. Tu tiempo sí."',
+    by: 'Gio Vega, fundador',
+    stats: [
+      ['14+', 'años en operaciones y ajuste de siniestros'],
+      ['1,000+', 'visitas a talleres en campo'],
+      ['MBA', 'con certificación STEM, University of San Diego'],
+      ['ES / EN', 'idiomas de trabajo, ambos nativos'],
+    ],
+    list: [
+      ['Certificado en IA generativa,', 'IE Business School: Unlocking Enterprise Value.'],
+      ['Estudia lo que Vemor practica.', 'Prepara una investigación doctoral sobre cómo las organizaciones asumen compromisos de IA que puedan sostener.'],
+      ['En producción hoy.', 'Conciliación automática, rastreo RFID, agentes de voz bilingües e inteligencia de documentos legales.'],
+      ['De los dos lados de la frontera.', 'Con sede en San Diego, trabajando con operadores en México y Estados Unidos.'],
+    ],
+    products: 'La misma disciplina hoy se entrega como producto. <a href="/comps" style="color:var(--gold);">Vemor Comps</a> la aplica a los expedientes públicos PAGA de California y les da a los abogados datos de acuerdos que pueden verificar renglón por renglón. <a href="PRODUCTS" style="color:var(--gold);">Pizarrón</a> la aplica a los costos de un restaurante, donde cada número del plan semanal enlaza a una factura, un inventario o una venta.',
+    whyLabel: 'Por qué existe Vemor',
+    why: 'La IA está cambiando cómo operan los negocios. La única pregunta es si eso te pasa <em>a ti</em> o trabaja <em>para ti</em>. Vemor construye IA que le quita trabajo real a gente real y la somete al estándar de un operador: revisable, rastreable y con responsable.',
+    star: ['"IA que hace el trabajo &mdash; ', 'y rinde cuentas.', '"'],
+    talk: 'Hablemos.', cta1: 'Agenda una llamada', cta2: 'Envía un mensaje',
+  },
+};
+const t = copy[lang];
+const productsHtml = t.products.replace('PRODUCTS', `${base || '/'}#products`);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Giovanni Vega Garcia',
+  alternateName: 'Gio',
+  jobTitle: 'Founder',
+  worksFor: { '@type': 'Organization', name: 'Vemor', url: 'https://vemor.ai' },
+  knowsLanguage: ['en', 'es'],
+  alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'University of San Diego' }],
+  description: 'Operations manager and field claims adjuster turned AI systems builder. MBA (University of San Diego), GenAI certificate (IE Business School). Founder of Vemor Consulting LLC, San Diego.',
+};
+---
+<Base title={t.metaTitle} description={t.metaDesc} schema={schema} path={`${base}/about`} lang={lang} translated={true}>
+  <section class="hero" style="min-height:0; padding-bottom:60px;">
+    <span class="hero-tagline">{t.tag}</span>
+    <h1>{t.h1a}<br /><span class="gold">{t.h1b}</span></h1>
+    <p class="hero-sub">{t.sub}</p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="story-grid">
+      <div class="prose">
+        {t.prose.map((p) => <p set:html={p} />)}
+        <div class="pull-quote">
+          {t.quote}
+          <span style="display:block; margin-top:8px; font-style:normal; font-weight:600; color:var(--gold);">{t.by}</span>
+        </div>
+      </div>
+      <div>
+        <div class="story-stats">
+          {t.stats.map(([v, l]) => (
+            <div class="stat-card">
+              <div class="stat-value">{v}</div>
+              <div class="stat-label">{l}</div>
+            </div>
+          ))}
+        </div>
+        <div style="margin-top:24px;">
+          <ul class="feature-list">
+            {t.list.map(([b, r]) => <li><span><strong>{b}</strong> {r}</span></li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom:0;">
+    <div class="prose" style="max-width:720px;">
+      <p set:html={productsHtml} />
+    </div>
+  </section>
+
+  <section>
+    <span class="label">{t.whyLabel}</span>
+    <div class="prose" style="max-width:720px;">
+      <p set:html={t.why} />
+    </div>
+  </section>
+
+  <div class="section-full soft north-star">
+    <p class="north-star-text"><Fragment set:html={t.star[0]} /><em>{t.star[1]}</em>{t.star[2]}</p>
+  </div>
+
+  <section style="text-align:center;">
+    <h2 class="title">{t.talk}</h2>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="https://Vemor.as.me/" class="btn-primary">{t.cta1}</a>
+      <a href={`${base}/contact`} class="btn-secondary">{t.cta2}</a>
+    </div>
+  </section>
+</Base>
