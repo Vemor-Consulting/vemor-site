@@ -4,8 +4,9 @@ Newest first. Start here for site work. The pre-November history lives one folde
 `../PROGRESS.md` (August rebuild) and `SITE_AUDIT_2026-09-17.md`.
 
 Repo: github.com/Vemor-Consulting/vemor-site · Stack: Astro (static) · Hosting: Netlify.
-Deploy: Netlify cannot auto-deploy this private org repo on the free tier, so deploys are a
-manual zip drag (see "How to deploy" below and `../DEPLOY_FIX.md`).
+Deploy: push to `main`. Netlify auto-deployed within about a minute on 2026-11-12. It has
+missed pushes before (September), so if the live site has not changed after ~10 minutes,
+fall back to the zip drag below.
 
 ## Copy rules (standing)
 
@@ -44,7 +45,7 @@ glossary, and legal pages are English only (ES switch sends them to `/es`).
 **Other:** Sofia voice widget only on `/voice`. Voice is out of the nav (reachable from Builds).
 About headline is plain ("Giovanni Vega, Founder.").
 
-**Open before deploy:**
+**Deployed 2026-11-12** (push to `main`, commit 8414270, live in ~1 min). Still open:
 - [ ] Gio fact-check of both case studies (station count, "several rounds" of report
       revisions, the 2% to 23% figures, "623 documents").
 - [ ] After deploy: confirm `vemor.ai/es` resolves (relies on `public/_redirects`) and the
@@ -69,6 +70,8 @@ About headline is plain ("Giovanni Vega, Founder.").
 - Pizarrón public page once the name is final ("Pizarrón by Vemor").
 
 ## How to deploy
+
+Normal path: merge to `main` and `git push origin main`. Fallback if Netlify misses it:
 
 ```bash
 cd ~/Vemor/Website/vemor-site-v2
