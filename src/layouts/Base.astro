@@ -28,11 +28,13 @@ const esHref = lang === 'es' ? here : (translated ? esPath : '/es');
 const abs = (p: string) => new URL(p, Astro.site).href;
 
 const base = lang === 'es' ? '/es' : '';
+
+
 const nav = {
-  en: { builds: 'Builds', operations: 'Operations', products: 'Products', about: 'About', contact: 'Contact', cta: 'Book a Call',
+  en: { builds: 'Builds', operations: 'Operations', cases: 'Case Studies', about: 'About', contact: 'Contact', cta: 'Book a Call',
         home: 'Vemor home', menu: 'Menu', langLabel: 'Language', footBuilds: 'Custom Builds', footOps: 'Managed AI Operations',
         terms: 'Terms', privacy: 'Privacy', place: 'San Diego, CA · English and Spanish' },
-  es: { builds: 'Proyectos', operations: 'Operaciones', products: 'Productos', about: 'Nosotros', contact: 'Contacto', cta: 'Agenda una llamada',
+  es: { builds: 'Proyectos', operations: 'Operaciones', cases: 'Casos', about: 'Nosotros', contact: 'Contacto', cta: 'Agenda una llamada',
         home: 'Inicio de Vemor', menu: 'Menú', langLabel: 'Idioma', footBuilds: 'Proyectos a la medida', footOps: 'Operaciones de IA administradas',
         terms: 'Términos', privacy: 'Privacidad', place: 'San Diego, CA · Español e inglés' },
 }[lang];
@@ -109,7 +111,7 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
     <ul class="nav-links">
       <li><a href={`${base}/builds`}>{nav.builds}</a></li>
       <li><a href={`${base}/operations`}>{nav.operations}</a></li>
-      <li><a href={`${base || '/'}#products`}>{nav.products}</a></li>
+      <li><a href={`${base || '/'}#case-studies`}>{nav.cases}</a></li>
       <li><a href={`${base}/about`}>{nav.about}</a></li>
       <li><a href={`${base}/contact`}>{nav.contact}</a></li>
       <li>
@@ -135,7 +137,6 @@ const schemas = [orgSchema, ...(schema ? (Array.isArray(schema) ? schema : [sche
       <li><a href={`${base}/builds`}>{nav.footBuilds}</a></li>
       <li><a href={`${base}/operations`}>{nav.footOps}</a></li>
       <li><a href="/comps">Vemor Comps</a></li>
-      <li><a href={`${base || '/'}#products`}>Pizarrón</a></li>
       <li><a href="/voice">Vemor Voice</a></li>
       <li><a href={`${base}/about`}>{nav.about}</a></li>
       <li><a href="mailto:gio@vemor.ai">gio@vemor.ai</a></li>

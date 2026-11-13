@@ -8,225 +8,107 @@ const base = lang === 'es' ? '/es' : '';
 const copy = {
   en: {
     metaTitle: 'Vemor | AI Systems Built, Verified, and Operated',
-    metaDesc: 'Vemor designs, builds, and operates AI systems for work where a wrong number is expensive. Every figure traced to its source, every exception sent to a person. English and Spanish. San Diego, serving the U.S. and Mexico.',
-    schemaDesc: 'Vemor designs, builds, and operates verified AI systems for operations, and owns the products built on them. Bilingual, English and Spanish.',
+    metaDesc: 'Vemor builds and runs AI systems for the parts of your business where a mistake costs money. Every figure traced to its source, every exception sent to a person. English and Spanish. San Diego, serving the U.S. and Mexico.',
+    schemaDesc: 'Vemor builds and runs verified AI systems for operations, and owns the products built on them. English and Spanish.',
     hero: {
       tag: 'AI Systems, Built and Operated',
       h1a: 'AI that does the work', h1b: 'and shows the work.',
-      sub: 'Building AI got easy. Trusting it with real money did not. Vemor designs, builds, and operates AI systems for work where a wrong number is expensive: every figure traced to its source, every exception sent to a person, one team accountable when something breaks.',
-      cta1: 'Talk to Vemor', cta2: 'See the standard',
+      sub: 'Anyone can build an AI tool now. Making it hold up when money depends on it is the hard part. Vemor builds and runs AI systems for the parts of your business where a mistake costs money, and we answer for them.',
+      cta1: 'Talk to Vemor', cta2: 'See the case studies',
     },
     proof: [
       ['30+ hrs/wk', 'Manual reconciliation eliminated for one operator'],
       ['20,000+', 'Legal matters tracked and verified'],
-      ['100%', 'Of reported figures matched to source text'],
       ['EN / ES', 'Built and operated in both languages'],
     ],
-    problem: {
-      label: 'The Problem',
-      title: 'The demo is the easy part.',
-      sub: 'Anyone can stand up an AI tool in a weekend. The hard questions come after, when the business starts to depend on it.',
-      cards: [
-        ['Who checks the output?', 'A model will hand you a confident number whether or not it is right. If nobody can trace that number to where it came from, nobody can sign off on it.'],
-        ['What happens when it is wrong?', 'It will be, sometimes. The question is whether the system catches it, flags it, and stops, or whether it shows up three weeks later in accounting.'],
-        ['Who owns it at 6 AM?', 'Software that runs a real process needs an owner: someone who monitors it, fixes it, and answers for it. A tool without one is a liability with a login.'],
-      ],
-    },
-    story: {
-      label: 'In Production',
-      title: 'It started with one report. It became four systems.',
-      sub: 'A four-location vehicle inspection operation in Southern California. This is how Vemor engagements go: one problem solved and proven, then the next.',
-      stats: [
-        ['30+ hrs/wk', 'of manual reconciliation, eliminated'],
-        ['Same day', 'payment errors caught, not weeks later'],
-        ['4 systems', 'live: reporting, RFID tracking, voice, security'],
-        ['Month 1', '"The system paid for itself"'],
-      ],
-      blocks: [
-        ['Where it started', 'Reconciling sales across four stations was a full-time job. Five days a week of comparing printouts, hunting voided invoices, checking discounts, and finding payment errors. Mistakes still slipped through for weeks.'],
-        ['What Vemor built', 'A pipeline that reads the existing point-of-sale database every night, reconciles everything, flags exceptions, and emails a finished report before opening. A full-time job became about an hour a day of reviewing work that is already done.'],
-        ['What happened next', 'With the first system proven, the next problem came up: rental equipment going missing. Vemor built RFID tracking across all four locations. Then a bilingual voice agent for the phones. Then security management. One relationship, four systems, all operated by Vemor today.'],
-      ],
-      quote: '"The system paid for itself in the first month."',
-    },
     services: {
-      label: 'How We Work',
-      title: 'Three ways to engage.',
-      sub: 'Find out what is worth building, get one system built, or have Vemor build and run it. In every case you get a working result with evidence behind it, not a tool to figure out.',
+      label: 'What We Do',
+      title: 'Three ways to work with Vemor.',
       cards: [
-        { badge: 'Start Here', h: 'Operations Assessment', tag: 'Know what is worth automating.',
-          p: 'A short paid engagement inside your operation. We map where the hours and the errors are, what a fix is worth, and what should be left alone.',
-          list: ['A few days inside the real workflow', 'Written plan with scope and cost', 'Build, buy, or leave alone, stated plainly', 'Yours to keep, whether or not we build it'],
-          cta: 'Start with an assessment →', href: '/contact' },
-        { badge: 'One System', h: 'Custom Builds', tag: 'Fixed scope. Proven on your data.',
-          p: 'One system built around one expensive problem: a reconciliation engine, a document pipeline, asset tracking, a bilingual voice agent.',
-          list: ['Scope and price agreed before the build', 'Built on the systems you already run', 'Tested on your real work, not a demo', 'Handed over documented, or operated by Vemor'],
-          cta: 'How builds work →', href: '/builds' },
-        { badge: 'The Core Service', h: 'Managed AI Operations', tag: 'Built, monitored, and answered for.', featured: true,
-          p: 'Vemor designs the system, builds it, and runs it in production. You get an operator and a builder on your side, accountable for the result.',
-          list: ['Monitoring and exception handling', 'Reports that show what the system did', 'One accountable team', 'Your data and your systems stay yours'],
-          cta: 'The full service →', href: '/operations' },
+        { h: 'Assess', tag: 'Find what is worth automating.', p: 'A few days inside your operation, then a written plan: what to build, what it costs, what it returns, and what to leave alone.', cta: 'Start here →', href: '/contact' },
+        { h: 'Build', tag: 'One system, fixed scope.', p: 'One expensive problem, solved on the tools you already run. Scope and price agreed before the build, proven on your real data before it goes live.', cta: 'How builds work →', href: '/builds' },
+        { h: 'Run', tag: 'We operate it and answer for it.', p: 'Vemor monitors the system, handles the exceptions, reports on what it did, and fixes it when something breaks.', cta: 'Managed operations →', href: '/operations', featured: true },
       ],
     },
-    products: {
-      label: 'Products',
-      title: 'Systems we own and operate.',
-      sub: 'The same standard, packaged for one industry at a time. Each product started as a real problem inside a real operation.',
+    cases: {
+      label: 'Case Studies',
+      title: 'How the work actually goes.',
+      sub: 'What the problem was, what we built, how we know it works, and what broke along the way.',
       cards: [
-        { badge: 'For Employment Attorneys', h: 'Vemor Comps', tag: 'PAGA settlement data. Verified.',
-          p: 'Settlement comparables for California attorneys, built from public filings. Every figure is matched to the text of the filed document it came from, and the filings ship with the report.',
-          list: ['20,000+ PAGA matters tracked', 'Figures that fail the source match are withheld', 'Reports, working Excel, and benchmark statistics', 'Updated daily'],
-          cta: 'See Vemor Comps →', href: '/comps' },
-        { badge: 'For Restaurant Groups', h: 'Pizarrón', tag: 'Cost control that shows its math.',
-          p: 'Pizarrón reads supplier price lists, inventory counts, and point-of-sale data, then writes the plan for the week: what to buy, from whom, and which dishes are losing margin.',
-          list: ['AI reads the documents. Code computes every number.', 'Every line links to its evidence', 'Runs on top of the POS you already use', 'English and Spanish. Now in private demos.'],
-          cta: 'Request a demo →', href: '/contact' },
+        { badge: 'Multi-Location Operator', h: 'One report became four systems.', stat: '30+ hrs/wk of manual reconciliation, eliminated', p: 'The bookkeeper spent the week matching sales to card settlements by hand. Now a nightly system does the matching and a person reviews only the exceptions.', href: '/case-studies/reconciliation' },
+        { badge: 'Legal Data', h: 'Settlement numbers attorneys can check.', stat: '20,000+ matters tracked, every figure matched to source', p: 'An extraction engine for court filings where a number that cannot be matched to its source is withheld, not guessed. Including the week the check started failing.', href: '/case-studies/settlement-verification' },
       ],
-    },
-    process: {
-      label: 'The Process',
-      title: 'Five steps. No mystery.',
-      sub: 'The same process behind every system Vemor runs today.',
-      steps: [
-        ['Assess', 'We map where the time and the errors actually are, and find the work worth automating first.'],
-        ['Architect', 'We design around your existing systems. Build what is needed, buy what is smarter, skip the rest.'],
-        ['Build', 'Automations, AI agents, databases, integrations, hardware if the job calls for it. Tested on your real work.'],
-        ['Operate', 'We run it: monitoring, maintenance, reporting, and a person who answers when something breaks.'],
-        ['Expand', 'The next system gets built when the first one has proven itself. Not before.'],
-      ],
+      read: 'Read the case study →',
+      products: 'Vemor also builds and runs its own products: <a href="/comps">Vemor Comps</a> for employment attorneys and <a href="CONTACT">Pizarrón</a> for restaurant groups.',
     },
     standard: {
       label: 'The Vemor Standard',
       title: 'What happens when the AI is wrong?',
-      sub: 'Every system has to answer that question before it ships. Ours answer it the same way.',
       cards: [
-        ['Every figure has a source', 'Outputs trace back to the record, filing, or transaction they came from. A number that cannot be matched to its source is withheld, not guessed.'],
-        ['Code does the math', 'AI reads documents and writes words. Deterministic code computes every number and checks it against hard rules.'],
-        ['Exceptions go to people', 'What the system cannot resolve gets flagged, with the reason, and sent to a person. Nothing fails quietly.'],
-        ['It reports on itself', 'Every system reports what it did, what it found, and what needs a decision. Nothing runs on trust alone.'],
-        ['Built on what you have', 'Vemor systems sit on top of the tools you already run. No platform migration, no rip-and-replace, no new software for your team to learn.'],
-        ['No lock-in', 'Your data stays yours and the documentation ships with the system. Vemor keeps clients by being useful, not by locking the door.'],
+        ['Every figure has a source', 'Outputs trace back to the record, filing, or transaction they came from. A number that cannot be matched is withheld, not guessed.'],
+        ['Code does the math', 'AI reads documents and writes words. Code computes every number and checks it against fixed rules.'],
+        ['Exceptions go to a person', 'What the system cannot resolve is flagged, with the reason, and sent to someone who can decide. Nothing fails quietly.'],
       ],
     },
-    star: ['"AI is remaking how business runs. The only question is whether it happens ', 'to', ' you or ', 'for', ' you."'],
     final: {
-      title: 'Have a process where a wrong number is expensive?',
+      title: 'Have a process where a mistake costs money?',
       sub: 'Tell us what it is. You will get a straight answer on whether it is worth automating, and what it would take to trust the result.',
       cta1: 'Book a Call', cta2: 'Send a Message',
     },
   },
   es: {
     metaTitle: 'Vemor | Sistemas de IA construidos, verificados y operados',
-    metaDesc: 'Vemor diseña, construye y opera sistemas de IA para procesos donde un número equivocado cuesta caro. Cada cifra con su fuente, cada excepción revisada por una persona. Español e inglés. San Diego, con servicio en México y Estados Unidos.',
-    schemaDesc: 'Vemor diseña, construye y opera sistemas de IA verificables para operaciones, y es dueña de los productos construidos sobre ellos. Bilingüe, español e inglés.',
+    metaDesc: 'Vemor construye y opera sistemas de IA para las partes de tu negocio donde un error cuesta dinero. Cada cifra con su fuente, cada excepción revisada por una persona. Español e inglés. San Diego, con servicio en México y Estados Unidos.',
+    schemaDesc: 'Vemor construye y opera sistemas de IA verificables para operaciones, y es dueña de los productos construidos sobre ellos. Español e inglés.',
     hero: {
       tag: 'Sistemas de IA, construidos y operados',
       h1a: 'IA que hace el trabajo', h1b: 'y rinde cuentas.',
-      sub: 'Construir con IA se volvió fácil. Confiarle dinero de verdad, no. Vemor diseña, construye y opera sistemas de IA para procesos donde un número equivocado cuesta caro: cada cifra con su fuente, cada excepción en manos de una persona y un solo equipo que responde cuando algo falla.',
-      cta1: 'Habla con Vemor', cta2: 'Conoce el estándar',
+      sub: 'Hoy cualquiera puede armar una herramienta de IA. Lo difícil es que aguante cuando hay dinero de por medio. Vemor construye y opera sistemas de IA para las partes de tu negocio donde un error cuesta dinero, y respondemos por ellos.',
+      cta1: 'Habla con Vemor', cta2: 'Ver los casos',
     },
     proof: [
       ['30+ h/sem', 'De conciliación manual eliminadas para un solo operador'],
       ['20,000+', 'Asuntos legales rastreados y verificados'],
-      ['100%', 'De las cifras reportadas cotejadas con su fuente'],
       ['ES / EN', 'Construido y operado en los dos idiomas'],
     ],
-    problem: {
-      label: 'El problema',
-      title: 'El demo es la parte fácil.',
-      sub: 'Cualquiera puede armar una herramienta de IA en un fin de semana. Las preguntas difíciles llegan después, cuando el negocio empieza a depender de ella.',
-      cards: [
-        ['¿Quién revisa el resultado?', 'Un modelo te entrega un número con toda seguridad, esté bien o no. Si nadie puede rastrear de dónde salió, nadie puede firmarlo.'],
-        ['¿Qué pasa cuando se equivoca?', 'Va a pasar, tarde o temprano. La pregunta es si el sistema lo detecta, lo marca y se detiene, o si el error aparece tres semanas después en contabilidad.'],
-        ['¿Quién responde a las 6 de la mañana?', 'Un sistema que corre un proceso real necesita un responsable: alguien que lo vigile, lo arregle y dé la cara. Sin eso, es un riesgo con contraseña.'],
-      ],
-    },
-    story: {
-      label: 'En producción',
-      title: 'Empezó con un reporte. Hoy son cuatro sistemas.',
-      sub: 'Una operación de verificación vehicular con cuatro sucursales en el sur de California. Así avanzan los proyectos de Vemor: un problema resuelto y comprobado, y luego el siguiente.',
-      stats: [
-        ['30+ h/sem', 'de conciliación manual, eliminadas'],
-        ['El mismo día', 'se detectan los errores de cobro, no semanas después'],
-        ['4 sistemas', 'en operación: reportes, rastreo RFID, voz y seguridad'],
-        ['Mes 1', '"El sistema se pagó solo"'],
-      ],
-      blocks: [
-        ['Dónde empezó', 'Conciliar las ventas de cuatro sucursales era un trabajo de tiempo completo. Cinco días a la semana comparando impresiones, buscando facturas canceladas, revisando descuentos y encontrando errores de cobro. Y aun así los errores se colaban durante semanas.'],
-        ['Qué construyó Vemor', 'Un proceso que lee cada noche la base de datos del punto de venta que ya usaban, concilia todo, marca las excepciones y envía por correo un reporte terminado antes de abrir. Un trabajo de tiempo completo se convirtió en una hora diaria de revisar algo que ya está hecho.'],
-        ['Qué siguió', 'Con el primer sistema comprobado, surgió el siguiente problema: equipo de renta que desaparecía. Vemor instaló rastreo RFID en las cuatro sucursales. Después, un agente de voz bilingüe para los teléfonos. Después, la administración de seguridad. Una sola relación, cuatro sistemas, todos operados hoy por Vemor.'],
-      ],
-      quote: '"El sistema se pagó solo en el primer mes."',
-    },
     services: {
-      label: 'Cómo trabajamos',
+      label: 'Qué hacemos',
       title: 'Tres formas de trabajar con Vemor.',
-      sub: 'Averigua qué vale la pena construir, encarga un solo sistema o deja que Vemor lo construya y lo opere. En los tres casos recibes un resultado que funciona y la evidencia que lo respalda, no una herramienta que tienes que descifrar.',
       cards: [
-        { badge: 'Empieza aquí', h: 'Diagnóstico de operaciones', tag: 'Saber qué vale la pena automatizar.',
-          p: 'Un proyecto corto y pagado dentro de tu operación. Ubicamos dónde se van las horas y dónde nacen los errores, cuánto vale resolverlo y qué conviene dejar como está.',
-          list: ['Unos días dentro del proceso real', 'Plan por escrito con alcance y costo', 'Construir, comprar o no tocar, dicho con claridad', 'El plan es tuyo, lo construyamos o no'],
-          cta: 'Empieza con un diagnóstico →', href: '/contact' },
-        { badge: 'Un sistema', h: 'Proyectos a la medida', tag: 'Alcance fijo. Probado con tus datos.',
-          p: 'Un sistema construido alrededor de un problema que cuesta: un motor de conciliación, un flujo de documentos, rastreo de activos, un agente de voz bilingüe.',
-          list: ['Alcance y precio acordados antes de construir', 'Montado sobre los sistemas que ya usas', 'Probado con tu trabajo real, no con un demo', 'Entregado con documentación, u operado por Vemor'],
-          cta: 'Cómo funciona →', href: '/builds' },
-        { badge: 'El servicio principal', h: 'Operaciones de IA administradas', tag: 'Construido, vigilado y con responsable.', featured: true,
-          p: 'Vemor diseña el sistema, lo construye y lo opera en producción. Tienes de tu lado a alguien que opera y construye, y que responde por el resultado.',
-          list: ['Monitoreo y manejo de excepciones', 'Reportes que muestran lo que hizo el sistema', 'Un solo equipo responsable', 'Tus datos y tus sistemas siguen siendo tuyos'],
-          cta: 'El servicio completo →', href: '/operations' },
+        { h: 'Diagnóstico', tag: 'Saber qué vale la pena automatizar.', p: 'Unos días dentro de tu operación y luego un plan por escrito: qué construir, cuánto cuesta, cuánto regresa y qué conviene dejar como está.', cta: 'Empieza aquí →', href: '/contact' },
+        { h: 'Construcción', tag: 'Un sistema, alcance fijo.', p: 'Un problema que cuesta caro, resuelto sobre las herramientas que ya usas. Alcance y precio acordados antes de construir, probado con tus datos reales antes de operar.', cta: 'Cómo funciona →', href: '/builds' },
+        { h: 'Operación', tag: 'Lo operamos y respondemos por él.', p: 'Vemor vigila el sistema, atiende las excepciones, reporta lo que hizo y lo arregla cuando algo falla.', cta: 'Operaciones administradas →', href: '/operations', featured: true },
       ],
     },
-    products: {
-      label: 'Productos',
-      title: 'Sistemas propios, operados por nosotros.',
-      sub: 'El mismo estándar, empaquetado para una industria a la vez. Cada producto nació de un problema real dentro de una operación real.',
+    cases: {
+      label: 'Casos',
+      title: 'Cómo se hace el trabajo en la práctica.',
+      sub: 'Cuál era el problema, qué construimos, cómo sabemos que funciona y qué falló en el camino.',
       cards: [
-        { badge: 'Para abogados laborales', h: 'Vemor Comps', tag: 'Datos de acuerdos PAGA. Verificados.',
-          p: 'Comparables de acuerdos para abogados en California, construidos con expedientes públicos. Cada cifra se coteja con el texto del documento presentado ante el tribunal, y los documentos se entregan con el reporte.',
-          list: ['Más de 20,000 asuntos PAGA rastreados', 'La cifra que no coincide con su fuente no se publica', 'Reportes, Excel de trabajo y estadísticas', 'Actualizado a diario. Disponible en inglés.'],
-          cta: 'Ver Vemor Comps →', href: '/comps' },
-        { badge: 'Para grupos restauranteros', h: 'Pizarrón', tag: 'Control de costos que enseña las cuentas.',
-          p: 'Pizarrón lee las listas de precios de tus proveedores, los inventarios y las ventas del punto de venta, y arma el plan de la semana: qué comprar, a quién, y qué platillos están perdiendo margen.',
-          list: ['La IA lee los documentos. El código calcula cada número.', 'Cada renglón enlaza a su evidencia', 'Funciona sobre el punto de venta que ya usas', 'Español e inglés. Hoy en demos privados.'],
-          cta: 'Solicita un demo →', href: '/contact' },
+        { badge: 'Operador con varias sucursales', h: 'Un reporte se convirtió en cuatro sistemas.', stat: '30+ h/sem de conciliación manual, eliminadas', p: 'Contabilidad pasaba la semana cuadrando ventas contra los depósitos de tarjeta a mano. Hoy un sistema nocturno hace el cruce y una persona revisa solo las excepciones.', href: '/case-studies/reconciliation' },
+        { badge: 'Datos legales', h: 'Cifras de acuerdos que los abogados pueden comprobar.', stat: 'Más de 20,000 asuntos, cada cifra cotejada con su fuente', p: 'Un motor de extracción de expedientes donde un número que no coincide con su fuente no se publica. No se adivina. Incluida la semana en que la verificación empezó a fallar.', href: '/case-studies/settlement-verification' },
       ],
-    },
-    process: {
-      label: 'El proceso',
-      title: 'Cinco pasos. Sin misterio.',
-      sub: 'El mismo proceso detrás de cada sistema que Vemor opera hoy.',
-      steps: [
-        ['Diagnóstico', 'Ubicamos dónde están de verdad el tiempo y los errores, y qué conviene automatizar primero.'],
-        ['Diseño', 'Diseñamos alrededor de los sistemas que ya tienes. Construir lo necesario, comprar lo que convenga y omitir lo demás.'],
-        ['Construcción', 'Automatizaciones, agentes de IA, bases de datos, integraciones y hardware si hace falta. Probado con tu trabajo real.'],
-        ['Operación', 'Lo operamos nosotros: monitoreo, mantenimiento, reportes y una persona que responde cuando algo falla.'],
-        ['Expansión', 'El siguiente sistema se construye cuando el primero ya demostró que funciona. No antes.'],
-      ],
+      read: 'Leer el caso →',
+      products: 'Vemor también construye y opera productos propios: <a href="/comps">Vemor Comps</a> para abogados laborales y <a href="CONTACT">Pizarrón</a> para grupos restauranteros.',
     },
     standard: {
       label: 'El estándar Vemor',
       title: '¿Qué pasa cuando la IA se equivoca?',
-      sub: 'Todo sistema tiene que responder esa pregunta antes de salir a producción. Los nuestros la responden igual.',
       cards: [
-        ['Cada cifra tiene fuente', 'Los resultados se rastrean hasta el registro, el documento o la transacción de donde salieron. Si un número no coincide con su fuente, no se publica. No se adivina.'],
-        ['El código hace las cuentas', 'La IA lee documentos y redacta. Código determinista calcula cada número y lo valida contra reglas fijas.'],
-        ['Las excepciones van a una persona', 'Lo que el sistema no puede resolver se marca, con el motivo, y llega a una persona. Nada falla en silencio.'],
-        ['Rinde su propio reporte', 'Cada sistema reporta qué hizo, qué encontró y qué requiere una decisión. Nada funciona solo por confianza.'],
-        ['Sobre lo que ya tienes', 'Los sistemas de Vemor se montan sobre las herramientas que ya usas. Sin migraciones, sin tirar lo que funciona, sin software nuevo que tu equipo tenga que aprender.'],
-        ['Sin ataduras', 'Tus datos son tuyos y la documentación se entrega con el sistema. Vemor conserva a sus clientes por ser útil, no por cerrarles la puerta.'],
+        ['Cada cifra tiene fuente', 'Los resultados se rastrean hasta el registro, el documento o la transacción de donde salieron. Si un número no coincide, no se publica. No se adivina.'],
+        ['El código hace las cuentas', 'La IA lee documentos y redacta. El código calcula cada número y lo valida contra reglas fijas.'],
+        ['Las excepciones van a una persona', 'Lo que el sistema no puede resolver se marca, con el motivo, y llega a alguien que puede decidir. Nada falla en silencio.'],
       ],
     },
-    star: ['"La IA está cambiando cómo operan los negocios. La única pregunta es si eso te pasa ', 'a ti', ' o trabaja ', 'para ti', '."'],
     final: {
-      title: '¿Tienes un proceso donde un número equivocado cuesta caro?',
+      title: '¿Tienes un proceso donde un error cuesta dinero?',
       sub: 'Cuéntanos cuál es. Te diremos sin rodeos si vale la pena automatizarlo y qué haría falta para confiar en el resultado.',
       cta1: 'Agenda una llamada', cta2: 'Envía un mensaje',
     },
   },
 };
 const t = copy[lang];
-const link = (href: string) => (href.startsWith('/comps') ? href : `${base}${href}`);
+const link = (href: string) => `${base}${href}`;
 
 const schema = {
   '@context': 'https://schema.org',
@@ -241,11 +123,11 @@ const schema = {
   <!-- HERO -->
   <section class="hero">
     <span class="hero-tagline">{t.hero.tag}</span>
-    <h1>{t.hero.h1a} <span class="gold">&mdash;<br />{t.hero.h1b}</span></h1>
+    <h1>{t.hero.h1a}<br /><span class="gold">{t.hero.h1b}</span></h1>
     <p class="hero-sub">{t.hero.sub}</p>
     <div class="hero-ctas">
-      <a href={`${base}/contact`} class="btn-primary">{t.hero.cta1}</a>
-      <a href="#standard" class="btn-secondary">{t.hero.cta2}</a>
+      <a href={link('/contact')} class="btn-primary">{t.hero.cta1}</a>
+      <a href="#case-studies" class="btn-secondary">{t.hero.cta2}</a>
     </div>
     <div class="hero-proof">
       {t.proof.map(([v, l]) => (
@@ -257,81 +139,41 @@ const schema = {
     </div>
   </section>
 
-  <!-- THE PROBLEM -->
-  <div class="section-full soft" id="problem">
-    <div class="inner">
-      <span class="label">{t.problem.label}</span>
-      <h2 class="title">{t.problem.title}</h2>
-      <p class="sub">{t.problem.sub}</p>
-      <div class="cards-3">
-        {t.problem.cards.map(([h, p]) => (
-          <div class="card"><h3>{h}</h3><p>{p}</p></div>
-        ))}
-      </div>
-    </div>
-  </div>
-
-  <!-- THE STORY -->
-  <section id="results">
-    <span class="label">{t.story.label}</span>
-    <h2 class="title">{t.story.title}</h2>
-    <p class="sub">{t.story.sub}</p>
-    <div class="story-grid">
-      <div>
-        <div class="story-stats">
-          {t.story.stats.map(([v, l]) => (
-            <div class="stat-card">
-              <div class="stat-value">{v}</div>
-              <div class="stat-label">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div class="story-content">
-        {t.story.blocks.map(([h, p]) => (<><h4>{h}</h4><p>{p}</p></>))}
-        <div class="pull-quote">{t.story.quote}</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
+  <!-- WHAT WE DO -->
   <div class="section-full soft" id="services">
     <div class="inner">
       <span class="label">{t.services.label}</span>
       <h2 class="title">{t.services.title}</h2>
-      <p class="sub">{t.services.sub}</p>
-      <div class="cards-3">
+      <div class="cards-3" style="margin-top:40px;">
         {t.services.cards.map((c) => (
           <div class={c.featured ? 'card featured' : 'card'}>
-            <span class="card-badge">{c.badge}</span>
             <h3>{c.h}</h3>
             <p class="tagline">{c.tag}</p>
             <p>{c.p}</p>
-            <ul class="feature-list">{c.list.map((li) => <li>{li}</li>)}</ul>
-            <a href={link(c.href)} class="card-cta">{c.cta}</a>
+            <a href={link(c.href)} class="card-cta" style="margin-top:20px;">{c.cta}</a>
           </div>
         ))}
       </div>
     </div>
   </div>
 
-  <!-- PRODUCTS -->
-  <section id="products">
-    <span class="label">{t.products.label}</span>
-    <h2 class="title">{t.products.title}</h2>
-    <p class="sub">{t.products.sub}</p>
+  <!-- CASE STUDIES -->
+  <section id="case-studies">
+    <span class="label">{t.cases.label}</span>
+    <h2 class="title">{t.cases.title}</h2>
+    <p class="sub">{t.cases.sub}</p>
     <div class="cards-2">
-      {t.products.cards.map((c) => (
-        <div class="card">
+      {t.cases.cards.map((c) => (
+        <a href={link(c.href)} class="card case-card">
           <span class="card-badge">{c.badge}</span>
           <h3>{c.h}</h3>
-          <p class="tagline">{c.tag}</p>
+          <p class="tagline">{c.stat}</p>
           <p>{c.p}</p>
-          <ul class="feature-list">{c.list.map((li) => <li>{li}</li>)}</ul>
-          <a href={link(c.href)} class="card-cta">{c.cta}</a>
-        </div>
+          <span class="card-cta" style="margin-top:20px;">{t.cases.read}</span>
+        </a>
       ))}
     </div>
+    <p class="products-line" set:html={t.cases.products.replace('CONTACT', link('/contact'))} />
   </section>
 
   <!-- THE STANDARD -->
@@ -339,34 +181,12 @@ const schema = {
     <div class="inner">
       <span class="label">{t.standard.label}</span>
       <h2 class="title">{t.standard.title}</h2>
-      <p class="sub">{t.standard.sub}</p>
-      <div class="cards-3">
+      <div class="cards-3" style="margin-top:40px;">
         {t.standard.cards.map(([h, p]) => (
           <div class="card"><h3>{h}</h3><p>{p}</p></div>
         ))}
       </div>
     </div>
-  </div>
-
-  <!-- PROCESS -->
-  <section>
-    <span class="label">{t.process.label}</span>
-    <h2 class="title">{t.process.title}</h2>
-    <p class="sub">{t.process.sub}</p>
-    <div class="steps">
-      {t.process.steps.map(([h, p], i) => (
-        <div class="step">
-          <div class="step-num">{i + 1}</div>
-          <h3>{h}</h3>
-          <p>{p}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <!-- NORTH STAR -->
-  <div class="section-full soft north-star">
-    <p class="north-star-text">{t.star[0]}<em>{t.star[1]}</em>{t.star[2]}<em>{t.star[3]}</em>{t.star[4]}</p>
   </div>
 
   <!-- FINAL CTA -->
@@ -375,7 +195,7 @@ const schema = {
     <p class="sub" style="margin-left:auto; margin-right:auto;">{t.final.sub}</p>
     <div class="hero-ctas" style="justify-content:center;">
       <a href="https://Vemor.as.me/" class="btn-primary">{t.final.cta1}</a>
-      <a href={`${base}/contact`} class="btn-secondary">{t.final.cta2}</a>
+      <a href={link('/contact')} class="btn-secondary">{t.final.cta2}</a>
     </div>
   </section>
 </Base>

@@ -591,8 +591,8 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-/* Nav collapses earlier than the page layout: 7 items need the room. */
-@media (max-width: 860px) {
+/* Nav collapses earlier than the page layout: links + language switch + CTA need the room. */
+@media (max-width: 1000px) {
   nav { padding: 12px 22px; }
   .nav-links {
     display: none;
@@ -636,3 +636,34 @@ footer {
 
 .comps-signin { display: inline-block; margin-left: 8px; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; align-self: center; }
 .comps-signin:hover { color: var(--gold); }
+
+
+/* ===== CASE STUDIES ===== */
+a.case-card { display: block; color: inherit; }
+.products-line { margin-top: 32px; font-size: 0.95rem; color: var(--text-secondary); }
+.products-line a { color: var(--gold); font-weight: 600; }
+.products-line a:hover { text-decoration: underline; }
+
+/* Four stats in one row on the case study hero, two per row on phones. */
+.hero-proof.case-proof { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 24px; }
+
+.case-back { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 28px; }
+.case-back:hover { color: var(--gold); }
+
+.case-grid { display: grid; grid-template-columns: 280px 1fr; gap: 64px; align-items: start; }
+.case-aside { position: sticky; top: 110px; border-top: 1px solid var(--border); padding-top: 24px; }
+.case-glance dt { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 18px; }
+.case-glance dt:first-child { margin-top: 0; }
+.case-glance dd { font-size: 0.95rem; color: var(--text); margin-top: 4px; line-height: 1.5; }
+.case-body { max-width: 720px; }
+.case-body p + p { margin-top: 16px; }
+.case-body h4 { margin-top: 44px; }
+
+.case-next { display: inline-block; font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+.case-next:hover { color: var(--gold); }
+
+@media (max-width: 960px) {
+  .case-grid { grid-template-columns: 1fr; gap: 36px; }
+  .case-aside { position: static; }
+  .hero-proof.case-proof { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}

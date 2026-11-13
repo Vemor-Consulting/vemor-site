@@ -9,7 +9,7 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'Vemor Consulting LLC', url: 'https://vemor.ai/' },
   areaServed: { '@type': 'State', name: 'California' },
   audience: { '@type': 'Audience', audienceType: 'Attorneys and legal professionals' },
-  description: 'Verified PAGA settlement comparables built from California DIR public records — firm profile reports, working Excel, and source documents, updated daily.',
+  description: 'Verified PAGA settlement comparables built from California DIR public records: firm profile reports, working Excel, and source documents, updated daily.',
 };
 
 const faqSchema = {
@@ -21,7 +21,7 @@ const faqSchema = {
       name: 'What is a PAGA settlement comparable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A data point from a publicly filed PAGA settlement — gross amount, exposure denominator, fees, structure — used to benchmark the value of a similar claim in negotiation or mediation.',
+        text: 'A data point from a publicly filed PAGA settlement (gross amount, exposure denominator, fees, structure) used to benchmark the value of a similar claim in negotiation or mediation.',
       },
     },
     {
@@ -45,7 +45,7 @@ const faqSchema = {
       name: 'Do you cover class action settlements?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate — they resolve different claims and are never mixed in the same statistic.',
+        text: 'PAGA-only and Class + PAGA hybrid settlements are both covered and always kept separate. They resolve different claims and are never mixed in the same statistic.',
       },
     },
     {
@@ -61,7 +61,7 @@ const faqSchema = {
 ---
 <Base
   title="Vemor Comps | PAGA Settlement Data & Comparables for California Attorneys"
-  description="Vemor Comps turns California's public PAGA filings into verified settlement comparables — every figure matched to supporting text in the filed document. Reports, working Excel, and source documents for mediation prep. Updated daily."
+  description="Vemor Comps turns California's public PAGA filings into verified settlement comparables, with every figure matched to supporting text in the filed document. Reports, working Excel, and source documents for mediation prep. Updated daily."
   schema={[serviceSchema, faqSchema]}
   path="/comps"
 >
@@ -412,7 +412,7 @@ const faqSchema = {
             }
           })
           .catch(function () {
-            window.location.href = 'mailto:comps@vemor.ai?subject=Vemor Comps — ' +
+            window.location.href = 'mailto:comps@vemor.ai?subject=Vemor Comps: ' +
               encodeURIComponent(reqType) + '&body=' +
               encodeURIComponent('Firms: ' + data.get('firms') + '\nName: ' + data.get('name') + '\nEmail: ' + data.get('email'));
           });
